@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C679BEE1170926600010858A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE0170926600010858A /* UIKit.framework */; };
+		C679BEE3170926600010858A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE2170926600010858A /* Foundation.framework */; };
+		C679BEE5170926600010858A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE4170926600010858A /* CoreGraphics.framework */; };
+		C679BEEB170926600010858A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C679BEE9170926600010858A /* InfoPlist.strings */; };
+		C679BEED170926600010858A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C679BEEC170926600010858A /* main.m */; };
+		C679BEF1170926600010858A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C679BEF0170926600010858A /* AppDelegate.m */; };
+		C679BEF3170926600010858A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C679BEF2170926600010858A /* Default.png */; };
+		C679BEF5170926600010858A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C679BEF4170926600010858A /* Default@2x.png */; };
+		C679BEF7170926600010858A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C679BEF6170926600010858A /* Default-568h@2x.png */; };
+		C679BEFF170926600010858A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEFE170926600010858A /* SenTestingKit.framework */; };
+		C679BF00170926600010858A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE0170926600010858A /* UIKit.framework */; };
+		C679BF01170926600010858A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE2170926600010858A /* Foundation.framework */; };
+		C679BF09170926600010858A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C679BF07170926600010858A /* InfoPlist.strings */; };
+		C679BF0C170926600010858A /* book_readerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C679BF0B170926600010858A /* book_readerTests.m */; };
+		C679BF1D170931B10010858A /* ascii.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF16170931B10010858A /* ascii.txt */; };
+		C679BF1E170931B10010858A /* gb18030.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF17170931B10010858A /* gb18030.txt */; };
+		C679BF1F170931B10010858A /* japanese-euc.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF18170931B10010858A /* japanese-euc.txt */; };
+		C679BF20170931B10010858A /* shift-jis.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF19170931B10010858A /* shift-jis.txt */; };
+		C679BF21170931B10010858A /* utf-16-be.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF1A170931B10010858A /* utf-16-be.txt */; };
+		C679BF22170931B10010858A /* utf-16-le.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF1B170931B10010858A /* utf-16-le.txt */; };
+		C679BF23170931B10010858A /* utf-8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF1C170931B10010858A /* utf-8.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C679BF02170926600010858A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C679BED5170926600010858A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C679BEDC170926600010858A;
+			remoteInfo = "book-reader";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C679BEDD170926600010858A /* book-reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "book-reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C679BEE0170926600010858A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C679BEE2170926600010858A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C679BEE4170926600010858A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C679BEE8170926600010858A /* book-reader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "book-reader-Info.plist"; sourceTree = "<group>"; };
+		C679BEEA170926600010858A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C679BEEC170926600010858A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C679BEEE170926600010858A /* book-reader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "book-reader-Prefix.pch"; sourceTree = "<group>"; };
+		C679BEEF170926600010858A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C679BEF0170926600010858A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C679BEF2170926600010858A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C679BEF4170926600010858A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C679BEF6170926600010858A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C679BEFD170926600010858A /* book-readerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "book-readerTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C679BEFE170926600010858A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C679BF06170926600010858A /* book-readerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "book-readerTests-Info.plist"; sourceTree = "<group>"; };
+		C679BF08170926600010858A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C679BF0A170926600010858A /* book_readerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = book_readerTests.h; sourceTree = "<group>"; };
+		C679BF0B170926600010858A /* book_readerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = book_readerTests.m; sourceTree = "<group>"; };
+		C679BF16170931B10010858A /* ascii.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ascii.txt; sourceTree = "<group>"; };
+		C679BF17170931B10010858A /* gb18030.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gb18030.txt; sourceTree = "<group>"; };
+		C679BF18170931B10010858A /* japanese-euc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "japanese-euc.txt"; sourceTree = "<group>"; };
+		C679BF19170931B10010858A /* shift-jis.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "shift-jis.txt"; sourceTree = "<group>"; };
+		C679BF1A170931B10010858A /* utf-16-be.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utf-16-be.txt"; sourceTree = "<group>"; };
+		C679BF1B170931B10010858A /* utf-16-le.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utf-16-le.txt"; sourceTree = "<group>"; };
+		C679BF1C170931B10010858A /* utf-8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utf-8.txt"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C679BEDA170926600010858A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C679BEE1170926600010858A /* UIKit.framework in Frameworks */,
+				C679BEE3170926600010858A /* Foundation.framework in Frameworks */,
+				C679BEE5170926600010858A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C679BEF9170926600010858A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C679BEFF170926600010858A /* SenTestingKit.framework in Frameworks */,
+				C679BF00170926600010858A /* UIKit.framework in Frameworks */,
+				C679BF01170926600010858A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C679BED4170926600010858A = {
+			isa = PBXGroup;
+			children = (
+				C679BEE6170926600010858A /* book-reader */,
+				C679BF04170926600010858A /* book-readerTests */,
+				C679BEDF170926600010858A /* Frameworks */,
+				C679BEDE170926600010858A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C679BEDE170926600010858A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C679BEDD170926600010858A /* book-reader.app */,
+				C679BEFD170926600010858A /* book-readerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C679BEDF170926600010858A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C679BEE0170926600010858A /* UIKit.framework */,
+				C679BEE2170926600010858A /* Foundation.framework */,
+				C679BEE4170926600010858A /* CoreGraphics.framework */,
+				C679BEFE170926600010858A /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C679BEE6170926600010858A /* book-reader */ = {
+			isa = PBXGroup;
+			children = (
+				C679BEEF170926600010858A /* AppDelegate.h */,
+				C679BEF0170926600010858A /* AppDelegate.m */,
+				C679BEE7170926600010858A /* Supporting Files */,
+			);
+			path = "book-reader";
+			sourceTree = "<group>";
+		};
+		C679BEE7170926600010858A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C679BEE8170926600010858A /* book-reader-Info.plist */,
+				C679BEE9170926600010858A /* InfoPlist.strings */,
+				C679BEEC170926600010858A /* main.m */,
+				C679BEEE170926600010858A /* book-reader-Prefix.pch */,
+				C679BEF2170926600010858A /* Default.png */,
+				C679BEF4170926600010858A /* Default@2x.png */,
+				C679BEF6170926600010858A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C679BF04170926600010858A /* book-readerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C679BF0A170926600010858A /* book_readerTests.h */,
+				C679BF0B170926600010858A /* book_readerTests.m */,
+				C679BF05170926600010858A /* Supporting Files */,
+			);
+			path = "book-readerTests";
+			sourceTree = "<group>";
+		};
+		C679BF05170926600010858A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C679BF15170931B10010858A /* texts */,
+				C679BF06170926600010858A /* book-readerTests-Info.plist */,
+				C679BF07170926600010858A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C679BF15170931B10010858A /* texts */ = {
+			isa = PBXGroup;
+			children = (
+				C679BF16170931B10010858A /* ascii.txt */,
+				C679BF17170931B10010858A /* gb18030.txt */,
+				C679BF18170931B10010858A /* japanese-euc.txt */,
+				C679BF19170931B10010858A /* shift-jis.txt */,
+				C679BF1A170931B10010858A /* utf-16-be.txt */,
+				C679BF1B170931B10010858A /* utf-16-le.txt */,
+				C679BF1C170931B10010858A /* utf-8.txt */,
+			);
+			path = texts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C679BEDC170926600010858A /* book-reader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C679BF0F170926600010858A /* Build configuration list for PBXNativeTarget "book-reader" */;
+			buildPhases = (
+				C679BED9170926600010858A /* Sources */,
+				C679BEDA170926600010858A /* Frameworks */,
+				C679BEDB170926600010858A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "book-reader";
+			productName = "book-reader";
+			productReference = C679BEDD170926600010858A /* book-reader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C679BEFC170926600010858A /* book-readerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C679BF12170926600010858A /* Build configuration list for PBXNativeTarget "book-readerTests" */;
+			buildPhases = (
+				C679BEF8170926600010858A /* Sources */,
+				C679BEF9170926600010858A /* Frameworks */,
+				C679BEFA170926600010858A /* Resources */,
+				C679BEFB170926600010858A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C679BF03170926600010858A /* PBXTargetDependency */,
+			);
+			name = "book-readerTests";
+			productName = "book-readerTests";
+			productReference = C679BEFD170926600010858A /* book-readerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C679BED5170926600010858A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = SideTrip.;
+			};
+			buildConfigurationList = C679BED8170926600010858A /* Build configuration list for PBXProject "book-reader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C679BED4170926600010858A;
+			productRefGroup = C679BEDE170926600010858A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C679BEDC170926600010858A /* book-reader */,
+				C679BEFC170926600010858A /* book-readerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C679BEDB170926600010858A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C679BEEB170926600010858A /* InfoPlist.strings in Resources */,
+				C679BEF3170926600010858A /* Default.png in Resources */,
+				C679BEF5170926600010858A /* Default@2x.png in Resources */,
+				C679BEF7170926600010858A /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C679BEFA170926600010858A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C679BF09170926600010858A /* InfoPlist.strings in Resources */,
+				C679BF1D170931B10010858A /* ascii.txt in Resources */,
+				C679BF1E170931B10010858A /* gb18030.txt in Resources */,
+				C679BF1F170931B10010858A /* japanese-euc.txt in Resources */,
+				C679BF20170931B10010858A /* shift-jis.txt in Resources */,
+				C679BF21170931B10010858A /* utf-16-be.txt in Resources */,
+				C679BF22170931B10010858A /* utf-16-le.txt in Resources */,
+				C679BF23170931B10010858A /* utf-8.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C679BEFB170926600010858A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C679BED9170926600010858A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C679BEED170926600010858A /* main.m in Sources */,
+				C679BEF1170926600010858A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C679BEF8170926600010858A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C679BF0C170926600010858A /* book_readerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C679BF03170926600010858A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C679BEDC170926600010858A /* book-reader */;
+			targetProxy = C679BF02170926600010858A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C679BEE9170926600010858A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C679BEEA170926600010858A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C679BF07170926600010858A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C679BF08170926600010858A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C679BF0D170926600010858A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C679BF0E170926600010858A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C679BF10170926600010858A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "book-reader/book-reader-Prefix.pch";
+				INFOPLIST_FILE = "book-reader/book-reader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C679BF11170926600010858A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "book-reader/book-reader-Prefix.pch";
+				INFOPLIST_FILE = "book-reader/book-reader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C679BF13170926600010858A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/book-reader.app/book-reader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "book-reader/book-reader-Prefix.pch";
+				INFOPLIST_FILE = "book-readerTests/book-readerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C679BF14170926600010858A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/book-reader.app/book-reader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "book-reader/book-reader-Prefix.pch";
+				INFOPLIST_FILE = "book-readerTests/book-readerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C679BED8170926600010858A /* Build configuration list for PBXProject "book-reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C679BF0D170926600010858A /* Debug */,
+				C679BF0E170926600010858A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C679BF0F170926600010858A /* Build configuration list for PBXNativeTarget "book-reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C679BF10170926600010858A /* Debug */,
+				C679BF11170926600010858A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C679BF12170926600010858A /* Build configuration list for PBXNativeTarget "book-readerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C679BF13170926600010858A /* Debug */,
+				C679BF14170926600010858A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C679BED5170926600010858A /* Project object */;
+}
