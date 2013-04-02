@@ -37,7 +37,7 @@
     }
 }
 
-//- (void)testGenerateTestFile {
+- (void)testGenerateTestFile {
 ////    NSArray *filenames = @[@"ascii.txt", @"gb18030.txt", @"japanese-euc.txt", @"shift-jis.txt", @"utf-16-be.txt", @"utf-16-le.txt", @"utf-8.txt"];
 ////    NSArray *contents = @[@"this is ascii file.",
 ////                           @"这是一段中文，gb18030编码",
@@ -84,6 +84,12 @@
 //    content = @"这是一段中文，utf-8编码";
 //    path = [NSHomeDirectory() stringByAppendingPathComponent:filename];
 //    [content writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
-//}
+    
+    NSString *filename = @"big5.txt";
+    NSString *content = @"這是一段中文，big5編碼";
+    NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:filename];
+    NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingBig5);
+    [content writeToFile:path atomically:YES encoding:enc error:nil];
+}
 
 @end
