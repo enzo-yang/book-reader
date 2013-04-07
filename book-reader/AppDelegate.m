@@ -14,6 +14,11 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    char c = 'a';
+    NSString *result = [[[NSString alloc] initWithBytes:&c length:0 encoding:NSUTF8StringEncoding] autorelease];
+    NSLog(@"result %@ %@", result, [result isKindOfClass:[NSString class]] ? @"YES" : @"NO");
+
     return YES;
 }
 
