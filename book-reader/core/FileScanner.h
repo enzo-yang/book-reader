@@ -18,7 +18,7 @@ extern const NSInteger kFileScannerTolerateMaxInvalidCount;
 
 @interface FileScanner : NSObject
 
-@property (nonatomic, retain, readonly) NSString *path;
+@property (nonatomic, strong, readonly) NSString *path;
 @property (nonatomic, assign, readonly) int size;
 @property (nonatomic, assign, readonly) NSStringEncoding encoding;
 @property (nonatomic, assign, readonly) BOOL canRandomAccess;

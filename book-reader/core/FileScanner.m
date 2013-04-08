@@ -7,19 +7,18 @@
 //
 
 #import "FileScanner.h"
-#import "AutoPropertyRelease.h"
 
 const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 
 @interface FileScanner()
 
-@property (nonatomic, retain, readwrite) NSString *path;
+@property (nonatomic, strong, readwrite) NSString *path;
 @property (nonatomic, assign, readwrite) int size;
 @property (nonatomic, assign, readwrite) NSStringEncoding encoding;
 @property (nonatomic, assign, readwrite) BOOL canRandomAccess;
 @property (nonatomic, assign, readwrite) int invalidCount;
 
-@property (nonatomic, retain) NSFileHandle *fileHandle;
+@property (nonatomic, strong) NSFileHandle *fileHandle;
 
 @end
 
@@ -33,11 +32,11 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
     NSStringEncoding BIG5Encoding       = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingBig5_HKSCS_1999);
     
     if (encoding == NSUTF8StringEncoding) {
-        result = [[[FileScannerUTF8 alloc] initWithPath:path] autorelease];
+        result = [[FileScannerUTF8 alloc] initWithPath:path];
     } else if (encoding == GB18030Encoding) {
-        result = [[[FileScannerGB18030 alloc] initWithPath:path] autorelease];
+        result = [[FileScannerGB18030 alloc] initWithPath:path];
     } else if (encoding == BIG5Encoding) {
-        result = [[[FileScannerBIG5 alloc] initWithPath:path] autorelease];
+        result = [[FileScannerBIG5 alloc] initWithPath:path];
     }
     
     return result;
@@ -49,12 +48,12 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
         encoding == NSISOLatin1StringEncoding ||
         encoding == NSISOLatin2StringEncoding ) {
         
-        result = [[[FileScannerLatin alloc] initWithPath:path encoding:encoding] autorelease];
+        result = [[FileScannerLatin alloc] initWithPath:path encoding:encoding];
         
     } else if (encoding == NSUTF16LittleEndianStringEncoding ||
                encoding == NSUTF16BigEndianStringEncoding ) {
         
-        result = [[[FileScannerUTF16 alloc] initWithPath:path encoding:encoding] autorelease];
+        result = [[FileScannerUTF16 alloc] initWithPath:path encoding:encoding];
     }
     
     return result;
@@ -71,7 +70,6 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
         
         self.fileHandle = [NSFileHandle fileHandleForReadingAtPath:self.path];
         if (!self.fileHandle) {
-            [self release];
             self = nil;
         } else {
             self.size = (int)[self.fileHandle seekToEndOfFile];
@@ -95,16 +93,14 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 
 - (void)dealloc {
     [self.fileHandle closeFile];
-    [AutoPropertyRelease releaseProperties:self thisClass:[FileScanner class]];
-    [super dealloc];
 }
 
 - (NSString *)description {
     CFStringEncoding cfEncoding = CFStringConvertNSStringEncodingToEncoding(self.encoding);
-    NSString *encodingName = (NSString *)CFStringConvertEncodingToIANACharSetName(cfEncoding);
+    NSString *encodingName = (__bridge NSString *)CFStringConvertEncodingToIANACharSetName(cfEncoding);
     
     NSDictionary *dict = @{@"path": self.path,
-                           @"encoding" : [[encodingName copy] autorelease],
+                           @"encoding" : [encodingName copy],
                            @"size": [NSNumber numberWithLongLong:self.size],
                            @"randomAccess" : self.canRandomAccess ? @"YES" : @"NO"};
     return [NSString stringWithFormat:@"%@", dict];
@@ -136,7 +132,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
         }
         
         NSData *data = [self.fileHandle readDataOfLength:n*2];
-        NSString *result = [[[NSString alloc] initWithData:data encoding:self.encoding] autorelease];
+        NSString *result = [[NSString alloc] initWithData:data encoding:self.encoding];
         
         if (!result) return @"";
         return result;
@@ -153,7 +149,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
         if ([self isEndOfFile]) return @"";
         
         NSData *data = [self.fileHandle readDataOfLength:n];
-        NSString *result = [[[NSString alloc] initWithData:data encoding:self.encoding] autorelease];
+        NSString *result = [[NSString alloc] initWithData:data encoding:self.encoding];
         
         if (!result) return @"";
         return result;
@@ -163,7 +159,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 
 @interface FileScannerOrderAccess()
 
-@property (nonatomic, retain) NSData    *data;
+@property (nonatomic, strong) NSData    *data;
 @property (nonatomic, assign) int       innerOffset;
 
 - (NSString *)_nextNChar:(int)n;
@@ -183,10 +179,6 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
     return self;
 }
 
-- (void)dealloc {
-    [AutoPropertyRelease releaseProperties:self thisClass:[FileScannerOrderAccess class]];
-    [super dealloc];
-}
 
 - (unsigned long long)position {
     unsigned long long filePosition = [self.fileHandle offsetInFile];
@@ -298,7 +290,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
         }
     }
     
-    NSString *result = [[[NSString alloc] initWithBytes:(bytes+self.innerOffset) length:byteCount encoding:self.encoding] autorelease];
+    NSString *result = [[NSString alloc] initWithBytes:(bytes+self.innerOffset) length:byteCount encoding:self.encoding];
     if (!result) {
         result = @"";
         self.invalidCount = kFileScannerTolerateMaxInvalidCount + 1;
@@ -410,7 +402,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
         ++wordCount;
     }
     
-    NSString *result = [[[NSString alloc] initWithBytes:(bytes+self.innerOffset) length:byteCount encoding:self.encoding] autorelease];
+    NSString *result = [[NSString alloc] initWithBytes:(bytes+self.innerOffset) length:byteCount encoding:self.encoding];
     if (!result) {
         result = @"";
         self.invalidCount = kFileScannerTolerateMaxInvalidCount + 1;
@@ -488,7 +480,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
         ++wordCount;
     }
     
-    NSString *result = [[[NSString alloc] initWithBytes:(bytes+self.innerOffset) length:byteCount encoding:self.encoding] autorelease];
+    NSString *result = [[NSString alloc] initWithBytes:(bytes+self.innerOffset) length:byteCount encoding:self.encoding];
     if (!result) {
         result = @"";
         self.invalidCount = kFileScannerTolerateMaxInvalidCount + 1;

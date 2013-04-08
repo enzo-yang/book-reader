@@ -9,6 +9,32 @@
 #import "book_readerTests.h"
 #import "FileTools.h"
 
+@interface AA : NSObject {
+    // NSString * _gg;
+}
+@property (nonatomic, weak) NSString *gg;
+@end
+
+@implementation AA
+
+- (id)run {
+    self.gg = [[NSString alloc] initWithFormat:@"xxxxxxyyyyyy %@", @"xxx"];
+    return self;
+}
+
+- (id)runAgain {
+    NSLog(@"%@", self.gg);
+    // NSLog(@"%@", _gg);
+    return self;
+}
+
+- (void)save:(NSError * __autoreleasing *)error {
+    *error = [[NSError alloc] initWithDomain:@"xxxx" code:12 userInfo:nil];
+}
+
+@end
+
+
 @implementation book_readerTests
 
 - (void)setUp
@@ -25,6 +51,16 @@
     [super tearDown];
 }
 
+- (void)testArc {
+    AA *a = [[[AA new] run] runAgain];
+    
+    [a runAgain];
+    
+    NSError * __autoreleasing error;
+    [a save:&error];
+    NSLog(@"error %@", error);
+}
+
 - (void)testReadFile {
 //    NSArray *filenames = @[@"ascii", @"gb18030", @"japanese-euc", @"shift-jis", @"utf-16-be", @"utf-16-le", @"utf-8"];
 //    for (NSString *filename in filenames) {
@@ -39,27 +75,27 @@
 }
 
 - (void)testEncodingRecognize {
-    NSString *utf8GuWenPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"古文观止-utf8" ofType:@"txt"];
-    NSString *utf16GuWenPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"古文观止-utf16" ofType:@"txt"];
-    NSString *gb18030Path = [[NSBundle bundleForClass:[self class]] pathForResource:@"诗经-gb18030" ofType:@"txt"];
-    NSString *utf8Path = [[NSBundle bundleForClass:[self class]] pathForResource:@"诗经-utf8" ofType:@"txt"];
-    NSString *asciiPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"ascii" ofType:@"txt"];
-    
-    FileScanner *scanner = nil;
-    scanner = [FileScanner fileScannerOfFile:utf8GuWenPath encoding:[FileTools recognizeEncoding:utf8GuWenPath]];
-    NSLog(@"%@", scanner);
-    
-    scanner = [FileScanner fileScannerOfFile:utf16GuWenPath encoding:[FileTools recognizeEncoding:utf16GuWenPath]];
-    NSLog(@"%@", scanner);
-    
-    scanner = [FileScanner fileScannerOfFile:gb18030Path encoding:[FileTools recognizeEncoding:gb18030Path]];
-    NSLog(@"%@", scanner);
-    
-    scanner = [FileScanner fileScannerOfFile:utf8Path encoding:[FileTools recognizeEncoding:utf8Path]];
-    NSLog(@"%@", scanner);
-    
-    scanner = [FileScanner fileScannerOfFile:asciiPath encoding:[FileTools recognizeEncoding:asciiPath]];
-    NSLog(@"%@", scanner);
+//    NSString *utf8GuWenPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"古文观止-utf8" ofType:@"txt"];
+//    NSString *utf16GuWenPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"古文观止-utf16" ofType:@"txt"];
+//    NSString *gb18030Path = [[NSBundle bundleForClass:[self class]] pathForResource:@"诗经-gb18030" ofType:@"txt"];
+//    NSString *utf8Path = [[NSBundle bundleForClass:[self class]] pathForResource:@"诗经-utf8" ofType:@"txt"];
+//    NSString *asciiPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"ascii" ofType:@"txt"];
+//    
+//    FileScanner *scanner = nil;
+//    scanner = [FileScanner fileScannerOfFile:utf8GuWenPath encoding:[FileTools recognizeEncoding:utf8GuWenPath]];
+//    NSLog(@"%@", scanner);
+//    
+//    scanner = [FileScanner fileScannerOfFile:utf16GuWenPath encoding:[FileTools recognizeEncoding:utf16GuWenPath]];
+//    NSLog(@"%@", scanner);
+//    
+//    scanner = [FileScanner fileScannerOfFile:gb18030Path encoding:[FileTools recognizeEncoding:gb18030Path]];
+//    NSLog(@"%@", scanner);
+//    
+//    scanner = [FileScanner fileScannerOfFile:utf8Path encoding:[FileTools recognizeEncoding:utf8Path]];
+//    NSLog(@"%@", scanner);
+//    
+//    scanner = [FileScanner fileScannerOfFile:asciiPath encoding:[FileTools recognizeEncoding:asciiPath]];
+//    NSLog(@"%@", scanner);
     
 }
 

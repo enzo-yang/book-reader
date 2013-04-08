@@ -20,8 +20,6 @@
 		C66F370A170A77C900B27F1A /* big5.txt in Resources */ = {isa = PBXBuildFile; fileRef = C66F3709170A77C900B27F1A /* big5.txt */; };
 		C66F370F170A7D8500B27F1A /* FileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C66F370E170A7D8500B27F1A /* FileScanner.m */; };
 		C66F3710170A7D8500B27F1A /* FileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C66F370E170A7D8500B27F1A /* FileScanner.m */; };
-		C66F3714170A8B4800B27F1A /* AutoPropertyRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = C66F3713170A8B4800B27F1A /* AutoPropertyRelease.m */; };
-		C66F3715170A8B4800B27F1A /* AutoPropertyRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = C66F3713170A8B4800B27F1A /* AutoPropertyRelease.m */; };
 		C679BEE1170926600010858A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE0170926600010858A /* UIKit.framework */; };
 		C679BEE3170926600010858A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE2170926600010858A /* Foundation.framework */; };
 		C679BEE5170926600010858A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE4170926600010858A /* CoreGraphics.framework */; };
@@ -69,8 +67,6 @@
 		C66F3709170A77C900B27F1A /* big5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = big5.txt; sourceTree = "<group>"; };
 		C66F370D170A7D8500B27F1A /* FileScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileScanner.h; sourceTree = "<group>"; };
 		C66F370E170A7D8500B27F1A /* FileScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileScanner.m; sourceTree = "<group>"; };
-		C66F3712170A8B4800B27F1A /* AutoPropertyRelease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoPropertyRelease.h; sourceTree = "<group>"; };
-		C66F3713170A8B4800B27F1A /* AutoPropertyRelease.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoPropertyRelease.m; sourceTree = "<group>"; };
 		C679BEDD170926600010858A /* book-reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "book-reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C679BEE0170926600010858A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C679BEE2170926600010858A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,8 +133,6 @@
 		C66F3711170A8B2800B27F1A /* helper */ = {
 			isa = PBXGroup;
 			children = (
-				C66F3712170A8B4800B27F1A /* AutoPropertyRelease.h */,
-				C66F3713170A8B4800B27F1A /* AutoPropertyRelease.m */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -370,7 +364,6 @@
 				C679BEED170926600010858A /* main.m in Sources */,
 				C679BEF1170926600010858A /* AppDelegate.m in Sources */,
 				C66F370F170A7D8500B27F1A /* FileScanner.m in Sources */,
-				C66F3714170A8B4800B27F1A /* AutoPropertyRelease.m in Sources */,
 				C6111CAB170EF4FA00755439 /* FileTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,7 +374,6 @@
 			files = (
 				C679BF0C170926600010858A /* book_readerTests.m in Sources */,
 				C66F3710170A7D8500B27F1A /* FileScanner.m in Sources */,
-				C66F3715170A8B4800B27F1A /* AutoPropertyRelease.m in Sources */,
 				C6111CAC170EF4FA00755439 /* FileTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,10 +465,13 @@
 		C679BF10170926600010858A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "book-reader/book-reader-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "book-reader/book-reader-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -484,10 +479,13 @@
 		C679BF11170926600010858A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "book-reader/book-reader-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "book-reader/book-reader-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -496,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/book-reader.app/book-reader";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -513,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/book-reader.app/book-reader";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",

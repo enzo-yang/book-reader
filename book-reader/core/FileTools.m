@@ -8,6 +8,7 @@
 
 #import "FileTools.h"
 
+
 const NSStringEncoding kUnknownStringEncoding = -1;
 
 @implementation FileTools
