@@ -9,30 +9,6 @@
 #import "book_readerTests.h"
 #import "FileTools.h"
 
-@interface AA : NSObject {
-    // NSString * _gg;
-}
-@property (nonatomic, weak) NSString *gg;
-@end
-
-@implementation AA
-
-- (id)run {
-    self.gg = [[NSString alloc] initWithFormat:@"xxxxxxyyyyyy %@", @"xxx"];
-    return self;
-}
-
-- (id)runAgain {
-    NSLog(@"%@", self.gg);
-    // NSLog(@"%@", _gg);
-    return self;
-}
-
-- (void)save:(NSError * __autoreleasing *)error {
-    *error = [[NSError alloc] initWithDomain:@"xxxx" code:12 userInfo:nil];
-}
-
-@end
 
 
 @implementation book_readerTests
@@ -40,7 +16,6 @@
 - (void)setUp
 {
     [super setUp];
-    
     // Set-up code here.
 }
 
@@ -51,15 +26,6 @@
     [super tearDown];
 }
 
-- (void)testArc {
-    AA *a = [[[AA new] run] runAgain];
-    
-    [a runAgain];
-    
-    NSError * __autoreleasing error;
-    [a save:&error];
-    NSLog(@"error %@", error);
-}
 
 - (void)testReadFile {
 //    NSArray *filenames = @[@"ascii", @"gb18030", @"japanese-euc", @"shift-jis", @"utf-16-be", @"utf-16-le", @"utf-8"];

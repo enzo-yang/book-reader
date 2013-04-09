@@ -168,9 +168,9 @@ myObject 的 performOperationWithError 使用的可能是 MRC 的代码， 也�
 	
 在 MRC 中 \_\_block id x = y; block 将不会 [x retain]; 在block执行完之后也不会 [x release];  
 
-在 ARC 中 \_\_block id x = y; 应该等于 \_\_strong \_\_block id x = y; 这样会有一个retain的过程，但是执行完block后不会 [x release]。  
+在 ARC 中 \_\_block id x = y; 应该等于 \_\_strong \_\_block id x = y; 这样会有一个retain的过程，在block被销毁的时候 [x release]。  
 
-从上面可以知道使用 \_\_block id x = y; 又不再block代码中进行处理会造成内存泄漏。(其实我认为不循环引用也是会造成内存泄露的)
+从上面可以知道使用 \_\_block id x = y; 而x如果拥有block的copy, 不进行处理会造成循环引用。
 
 于是 apple 告诉我们可以这样写:
 	
@@ -181,7 +181,7 @@ myObject 的 performOperationWithError 使用的可能是 MRC 的代码， 也�
     	myController = nil;
 	};
 	
-但对于多次调用的情况，上面无法达到目的。可以用 __weak 关键字来替代 __block (注意是替代，不是合用，我对合用没研究)
+但对于多次调用的情况，上面无法达到目的。可以用 __weak 关键字来替代 __block (注意是替代，不是合在一起用，我对合在一起用没研究)
 
 	MyViewController *myController = [[MyViewController alloc] init…];
 	// ...
@@ -207,9 +207,79 @@ myObject 的 performOperationWithError 使用的可能是 MRC 的代码， 也�
     	}
 	};
 
-到此问题基本解决。下面总结可能非常不全面
+到此表面问题基本解决。
 
-MRC 中\_\_block 的引入是为了解决循环强引用的问题，但在 ARC 中在不存在循环应用的情况下 默认的 \_\_strong 已经没有问题， 在要解决循环引用的时候， \_\_block 的功能不完善， 而 \_\_weak 则可以解决问题，这样说是不是在 ARC 下 \_\_weak 可以取代 \_\_block 呢。
+#### 一个古怪的行为
+
+有代码如下：
+	
+	@interface AA : NSObject
+	@property (strong) NSString *string;
+	@end
+
+	@implementation AA
+	- (void)dealloc {
+    	NSLog(@"%@ dealloc", self.string);
+	}
+	@end
+	
+	- (void)testArcSimple {
+    	AA * __strong aa_weak_holder = [[AA alloc] init];
+    	AA * __weak aa_weak = aa_weak_holder;
+    	aa_weak_holder.string = @"aa_weak";
+    
+    	void (^aBlock)(void) = ^(){
+    	    NSLog(@"block : %@", aa_weak.string);
+    	};
+    
+    	aa_weak_holder = nil;
+    	aBlock();
+	}
+	
+上面的输出是
+
+	block : aa_weak
+	aa_weak dealloc // 这个log出现在一个runloop的最后
+	
+而下面这段代码:
+	
+	AA * __strong aa_weak_holder = [[AA alloc] init];
+    aa_weak_holder.string = @"weak";
+    AA * __weak aa_weak = aa_weak_holder;
+    aa_weak_holder = nil;
+    NSLog(@"aa : %@", aa_weak);
+    
+输出为
+	
+	weak dealloc
+	aa : (null)
+	
+猜测是 aa_weak 在 
+
+    	void (^aBlock)(void) = ^(){
+    	    NSLog(@"block : %@", aa_weak.string);
+    	};
+
+的位置 [[aa_weak retain] autorelease] 了一遍。表示不懂。
+
+
+### Toll-Free Bridging
+
+* __bridge : Objective-C 和 Core Foundation 之间的转换， 拥有权不变。
+* __bridge_retained : 从 Objective-C 到 Core Foundation 的转换，由程序员负责把得到的 CFxxxRef 销毁
+* __bridge_transfer : 从 Core Foundation 到 Objective-C 的转换，由ARC负责把得到的 id 销毁
+
+\_\_bridge\_retained 的作用等于 CFBridgingRetain  
+\_\_bridge\_transfer 的作用等于 CFBridgingRelease
+
+#### Cocoa 方法返回的 CF 对象
+
+比如 [[UIColor greenColor] CGColor]; 编译器知道返回的 CFxxxRef 是不是需要 release 的， 当需要把它在此转换成 Cocoa 对象的时候， 不必用 \_\_bridge \_\_bridge_transfer 这样的修饰符， 但需要显式写出要转换成的类型， 比如：
+
+UIColor *color = (id)[UIColor greenColor].CGColor; // 虽然这样比较无聊。
+
+
+
 
 
 
