@@ -59,6 +59,10 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
     return result;
 }
 
++ (FileScannerByLine *)fileScannerByLineOfFile:(NSString *)path encoding:(NSStringEncoding)encoding {
+    FileScannerByLine *scanner = [[FileScannerByLine alloc] initWithPath:path encoding:encoding];
+    return scanner;
+}
 
 - (id)initWithPath:(NSString *)path encoding:(NSStringEncoding)encoding {
     self = [super init];
@@ -108,7 +112,10 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 
 @end
 
-@implementation FileScannerRandomAccess
+@implementation FileScannerRandomAccess {
+    @protected
+    int _bytesAChar;
+}
 
 - (id)initWithPath:(NSString *)path encoding:(NSStringEncoding)encoding {
     self = [super initWithPath:path encoding:encoding];
@@ -118,9 +125,26 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
     return self;
 }
 
+- (NSString *)nextNChar:(int)n from:(int)from {
+    if (from * _bytesAChar >= self.size) {
+        [self.fileHandle seekToEndOfFile];
+    } else {
+        [self.fileHandle seekToFileOffset:from * _bytesAChar];
+    }
+    return [self nextNChar:n];
+}
+
 @end
 
 @implementation FileScannerUTF16
+
+- (id)initWithPath:(NSString *)path encoding:(NSStringEncoding)encoding {
+    self = [super initWithPath:path encoding:encoding];
+    if (self) {
+        _bytesAChar = 2;
+    }
+    return self;
+}
 
 - (NSString *)nextNChar:(int)n {
     @synchronized(self) {
@@ -139,10 +163,17 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
     }
 }
 
-
 @end
 
 @implementation FileScannerLatin
+
+- (id)initWithPath:(NSString *)path encoding:(NSStringEncoding)encoding {
+    self = [super initWithPath:path encoding:encoding];
+    if (self) {
+        _bytesAChar = 1;
+    }
+    return self;
+}
 
 - (NSString *)nextNChar:(int)n {
     @synchronized(self) {
@@ -500,3 +531,68 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 }
 
 @end
+
+#define kByteCountPerLoad 100000 // 100k
+
+@implementation FileScannerByLine {
+    int _bufferStartOffset;
+    int _offsetInBuffer;
+    
+    NSMutableData *_buffer;
+    NSData *_newLineData;
+}
+
+- (id)initWithPath:(NSString *)path encoding:(NSStringEncoding)encoding {
+    self = [super initWithPath:path encoding:encoding];
+    if (self) {
+        [self _loadMoreData];
+    }
+    return self;
+}
+
+- (NSString *)nextLine {
+    NSRange range = [_buffer rangeOfData:_newLineData options:0 range:NSMakeRange(_bufferStartOffset, _buffer.length - _bufferStartOffset)];
+    
+    if (range.location != NSNotFound) {
+        
+    } else if (range.location == NSNotFound && ![self _isNoMoreBuffer]) {
+        [self _loadMoreData];
+        return [self nextLine];
+    } else {
+        // NSDataReadingMappedAlways
+    }
+}
+
+- (void) _loadMoreData {
+    NSData *data = [self.fileHandle readDataOfLength:kByteCountPerLoad];
+    if (_buffer) {
+        _bufferStartOffset = _bufferStartOffset + _offsetInBuffer;
+        _offsetInBuffer = 0;
+        _buffer = [[_buffer subdataWithRange:NSMakeRange(_offsetInBuffer, _buffer.length - _offsetInBuffer)] mutableCopy];
+    } else {
+        _bufferStartOffset = 0;
+        _offsetInBuffer = 0;
+        _buffer = [NSMutableData new];
+    }
+    
+    [_buffer appendData:data];
+}
+
+- (unsigned long long)position {
+    return _bufferStartOffset + _offsetInBuffer;
+}
+
+- (BOOL)isEndOfFile {
+    return _offsetInBuffer == _buffer.length && [self _isNoMoreBuffer];
+}
+
+- (BOOL)_isNoMoreBuffer {
+    unsigned long long offset = [self.fileHandle offsetInFile];
+    if (offset == self.size)
+        return YES;
+    
+    return NO;
+}
+
+@end
+

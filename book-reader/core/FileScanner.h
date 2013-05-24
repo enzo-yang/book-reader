@@ -15,6 +15,7 @@
 extern const NSInteger kFileScannerTolerateMaxInvalidCount;
 
 @class FileScannerRandomAccess;
+@class FileScannerByLine;
 
 @interface FileScanner : NSObject
 
@@ -26,6 +27,7 @@ extern const NSInteger kFileScannerTolerateMaxInvalidCount;
 
 + (FileScanner *)fileScannerOfFile:(NSString *)path encoding:(NSStringEncoding)encoding;
 + (FileScannerRandomAccess *)fileScannerRandomAccessOfFile:(NSString *)path encoding:(NSStringEncoding)encoding;
++ (FileScannerByLine *)fileScannerByLineOfFile:(NSString *)path encoding:(NSStringEncoding)encoding;
 
 - (id)initWithPath:(NSString *)path encoding:(NSStringEncoding)encoding;
 - (NSString *)nextNChar:(int)n;
@@ -36,6 +38,8 @@ extern const NSInteger kFileScannerTolerateMaxInvalidCount;
 
 // 定长字符编码可以随机读取
 @interface FileScannerRandomAccess :FileScanner
+// offset 以字符为单位
+- (NSString *)nextNChar:(int)n from:(int)offset;
 @end
 
 @interface FileScannerUTF16 : FileScannerRandomAccess
@@ -62,4 +66,13 @@ extern const NSInteger kFileScannerTolerateMaxInvalidCount;
 // 仅用 kCFStringEncodingBig5_HKSCS_1999 已经足够
 @interface FileScannerBIG5 : FileScannerOrderAccess
 - (id)initWithPath:(NSString *)path;
+@end
+
+@interface FileScannerByLine : FileScanner
+
+// 包括换行符
+- (NSString *)nextLine;
+
+- (unsigned long long)position;
+- (BOOL)isEndOfFile;
 @end

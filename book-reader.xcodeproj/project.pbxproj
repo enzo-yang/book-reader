@@ -41,6 +41,7 @@
 		C679BF21170931B10010858A /* utf-16-be.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF1A170931B10010858A /* utf-16-be.txt */; };
 		C679BF22170931B10010858A /* utf-16-le.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF1B170931B10010858A /* utf-16-le.txt */; };
 		C679BF23170931B10010858A /* utf-8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF1C170931B10010858A /* utf-8.txt */; };
+		C6AB1FC3174F0E0F00129B60 /* TextPool.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1FC2174F0E0F00129B60 /* TextPool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		C679BF1A170931B10010858A /* utf-16-be.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utf-16-be.txt"; sourceTree = "<group>"; };
 		C679BF1B170931B10010858A /* utf-16-le.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utf-16-le.txt"; sourceTree = "<group>"; };
 		C679BF1C170931B10010858A /* utf-8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utf-8.txt"; sourceTree = "<group>"; };
+		C6AB1FC1174F0E0F00129B60 /* TextPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextPool.h; sourceTree = "<group>"; };
+		C6AB1FC2174F0E0F00129B60 /* TextPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextPool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				C66F370E170A7D8500B27F1A /* FileScanner.m */,
 				C6111CA9170EF4FA00755439 /* FileTools.h */,
 				C6111CAA170EF4FA00755439 /* FileTools.m */,
+				C6AB1FC1174F0E0F00129B60 /* TextPool.h */,
+				C6AB1FC2174F0E0F00129B60 /* TextPool.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				C679BEF1170926600010858A /* AppDelegate.m in Sources */,
 				C66F370F170A7D8500B27F1A /* FileScanner.m in Sources */,
 				C6111CAB170EF4FA00755439 /* FileTools.m in Sources */,
+				C6AB1FC3174F0E0F00129B60 /* TextPool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
