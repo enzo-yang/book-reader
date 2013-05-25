@@ -68,6 +68,7 @@ extern const NSInteger kFileScannerTolerateMaxInvalidCount;
 - (id)initWithPath:(NSString *)path;
 @end
 
+// 
 @interface FileScannerByLine : FileScanner
 
 // 包括换行符
