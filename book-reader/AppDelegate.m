@@ -19,10 +19,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    NSString *jis = @"次の\n\r行0D0Aをコー\n\rシフトJIS";
-    NSStringEncoding encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-    NSData *data = [jis dataUsingEncoding:NSShiftJISStringEncoding];
-    NSLog(@"data : %@", data);
+//    NSString *jis = @"次の\n\r行0D0Aをコー\n\rシフトJIS";
+//    NSStringEncoding encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+//    NSData *data = [jis dataUsingEncoding:NSShiftJISStringEncoding];
+//    NSLog(@"data : %@", data);
     
     return YES;
 }

@@ -11,12 +11,13 @@
 
 @interface Paginater : NSObject
 
-- (id)initWithRandomAccessText:(RandomAccessText *)text font:(UIFont *)font;
+- (id)initWithRandomAccessText:(RandomAccessText *)text size:(CGSize)size font:(UIFont *)font;
 
 - (BOOL)isPaginated;
 - (void)paginate;
 
 - (NSUInteger)pageCount;
 - (NSUInteger)offsetOfPage:(NSUInteger)page;
+- (NSString *)stringOfPage:(NSUInteger)page;
 
 @end

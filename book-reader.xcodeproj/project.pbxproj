@@ -11,6 +11,9 @@
 		C6111CAB170EF4FA00755439 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111CAA170EF4FA00755439 /* FileTools.m */; };
 		C6111CAC170EF4FA00755439 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111CAA170EF4FA00755439 /* FileTools.m */; };
 		C6111CAE170F07C900755439 /* 古文观止-utf8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6111CAD170F07C900755439 /* 古文观止-utf8.txt */; };
+		C63E43A217512C0100FFBA23 /* Paginater.mm in Sources */ = {isa = PBXBuildFile; fileRef = C65149DE175053D600B1E330 /* Paginater.mm */; };
+		C63E43A317512C0500FFBA23 /* RandomAccessText.m in Sources */ = {isa = PBXBuildFile; fileRef = C65149DB174FC9AC00B1E330 /* RandomAccessText.m */; };
+		C63E43A417512EBD00FFBA23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE4170926600010858A /* CoreGraphics.framework */; };
 		C642DB1A1710000A00A4A5EA /* 古文观止-big5.txt in Resources */ = {isa = PBXBuildFile; fileRef = C642DB141710000A00A4A5EA /* 古文观止-big5.txt */; };
 		C642DB1B1710000A00A4A5EA /* 古文观止-utf16.txt in Resources */ = {isa = PBXBuildFile; fileRef = C642DB151710000A00A4A5EA /* 古文观止-utf16.txt */; };
 		C642DB1C1710000A00A4A5EA /* 古文观止-utf16le.txt in Resources */ = {isa = PBXBuildFile; fileRef = C642DB161710000A00A4A5EA /* 古文观止-utf16le.txt */; };
@@ -126,6 +129,7 @@
 				C679BEFF170926600010858A /* SenTestingKit.framework in Frameworks */,
 				C679BF00170926600010858A /* UIKit.framework in Frameworks */,
 				C679BF01170926600010858A /* Foundation.framework in Frameworks */,
+				C63E43A417512EBD00FFBA23 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +401,8 @@
 				C679BF0C170926600010858A /* book_readerTests.m in Sources */,
 				C66F3710170A7D8500B27F1A /* FileScanner.m in Sources */,
 				C6111CAC170EF4FA00755439 /* FileTools.m in Sources */,
+				C63E43A217512C0100FFBA23 /* Paginater.mm in Sources */,
+				C63E43A317512C0500FFBA23 /* RandomAccessText.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
