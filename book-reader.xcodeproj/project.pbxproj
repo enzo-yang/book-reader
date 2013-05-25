@@ -19,7 +19,7 @@
 		C642DB1F1710000A00A4A5EA /* 诗经-utf16le.txt in Resources */ = {isa = PBXBuildFile; fileRef = C642DB191710000A00A4A5EA /* 诗经-utf16le.txt */; };
 		C65149D9174FBEEF00B1E330 /* 文学少女-Shift-JIS.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65149D8174FBEEF00B1E330 /* 文学少女-Shift-JIS.txt */; };
 		C65149DC174FC9AC00B1E330 /* RandomAccessText.m in Sources */ = {isa = PBXBuildFile; fileRef = C65149DB174FC9AC00B1E330 /* RandomAccessText.m */; };
-		C65149DF175053D600B1E330 /* Paginater.m in Sources */ = {isa = PBXBuildFile; fileRef = C65149DE175053D600B1E330 /* Paginater.m */; };
+		C65149DF175053D600B1E330 /* Paginater.mm in Sources */ = {isa = PBXBuildFile; fileRef = C65149DE175053D600B1E330 /* Paginater.mm */; };
 		C66F370A170A77C900B27F1A /* big5.txt in Resources */ = {isa = PBXBuildFile; fileRef = C66F3709170A77C900B27F1A /* big5.txt */; };
 		C66F370F170A7D8500B27F1A /* FileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C66F370E170A7D8500B27F1A /* FileScanner.m */; };
 		C66F3710170A7D8500B27F1A /* FileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C66F370E170A7D8500B27F1A /* FileScanner.m */; };
@@ -44,6 +44,8 @@
 		C679BF21170931B10010858A /* utf-16-be.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF1A170931B10010858A /* utf-16-be.txt */; };
 		C679BF22170931B10010858A /* utf-16-le.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF1B170931B10010858A /* utf-16-le.txt */; };
 		C679BF23170931B10010858A /* utf-8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF1C170931B10010858A /* utf-8.txt */; };
+		C6E295C417508B6800B8F28D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E295C317508B6800B8F28D /* CoreText.framework */; };
+		C6E295C517508B7200B8F28D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E295C317508B6800B8F28D /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +73,7 @@
 		C65149DA174FC9AC00B1E330 /* RandomAccessText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomAccessText.h; sourceTree = "<group>"; };
 		C65149DB174FC9AC00B1E330 /* RandomAccessText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomAccessText.m; sourceTree = "<group>"; };
 		C65149DD175053D600B1E330 /* Paginater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paginater.h; sourceTree = "<group>"; };
-		C65149DE175053D600B1E330 /* Paginater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Paginater.m; sourceTree = "<group>"; };
+		C65149DE175053D600B1E330 /* Paginater.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Paginater.mm; sourceTree = "<group>"; };
 		C66F3709170A77C900B27F1A /* big5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = big5.txt; sourceTree = "<group>"; };
 		C66F370D170A7D8500B27F1A /* FileScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileScanner.h; sourceTree = "<group>"; };
 		C66F370E170A7D8500B27F1A /* FileScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileScanner.m; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		C679BF1A170931B10010858A /* utf-16-be.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utf-16-be.txt"; sourceTree = "<group>"; };
 		C679BF1B170931B10010858A /* utf-16-le.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utf-16-le.txt"; sourceTree = "<group>"; };
 		C679BF1C170931B10010858A /* utf-8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utf-8.txt"; sourceTree = "<group>"; };
+		C6E295C317508B6800B8F28D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E295C417508B6800B8F28D /* CoreText.framework in Frameworks */,
 				C679BEE1170926600010858A /* UIKit.framework in Frameworks */,
 				C679BEE3170926600010858A /* Foundation.framework in Frameworks */,
 				C679BEE5170926600010858A /* CoreGraphics.framework in Frameworks */,
@@ -118,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E295C517508B7200B8F28D /* CoreText.framework in Frameworks */,
 				C679BEFF170926600010858A /* SenTestingKit.framework in Frameworks */,
 				C679BF00170926600010858A /* UIKit.framework in Frameworks */,
 				C679BF01170926600010858A /* Foundation.framework in Frameworks */,
@@ -137,7 +142,7 @@
 				C65149DA174FC9AC00B1E330 /* RandomAccessText.h */,
 				C65149DB174FC9AC00B1E330 /* RandomAccessText.m */,
 				C65149DD175053D600B1E330 /* Paginater.h */,
-				C65149DE175053D600B1E330 /* Paginater.m */,
+				C65149DE175053D600B1E330 /* Paginater.mm */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 		C679BEDF170926600010858A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6E295C317508B6800B8F28D /* CoreText.framework */,
 				C679BEE0170926600010858A /* UIKit.framework */,
 				C679BEE2170926600010858A /* Foundation.framework */,
 				C679BEE4170926600010858A /* CoreGraphics.framework */,
@@ -380,7 +386,7 @@
 				C66F370F170A7D8500B27F1A /* FileScanner.m in Sources */,
 				C6111CAB170EF4FA00755439 /* FileTools.m in Sources */,
 				C65149DC174FC9AC00B1E330 /* RandomAccessText.m in Sources */,
-				C65149DF175053D600B1E330 /* Paginater.m in Sources */,
+				C65149DF175053D600B1E330 /* Paginater.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

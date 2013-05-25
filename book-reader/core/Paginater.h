@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RandomAccessText.h"
 
 @interface Paginater : NSObject
+
+- (id)initWithRandomAccessText:(RandomAccessText *)text font:(UIFont *)font;
+
+- (BOOL)isPaginated;
+- (void)paginate;
+
+- (NSUInteger)pageCount;
+- (NSUInteger)offsetOfPage:(NSUInteger)page;
 
 @end
