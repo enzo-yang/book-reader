@@ -91,6 +91,7 @@ using namespace std;
             buffer = nil;
             
             currentInnerOffset = 0;
+            
             frameSetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef) attrString);
         } else {
             // 已经分完，提示跳出循环

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Paginater.h"
 
 @interface AppDelegate()
 @end
@@ -23,6 +23,19 @@
 //    NSStringEncoding encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
 //    NSData *data = [jis dataUsingEncoding:NSShiftJISStringEncoding];
 //    NSLog(@"data : %@", data);
+    
+    NSString *utf16GuWenPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"古文观止-utf16" ofType:@"txt"];
+    RandomAccessText *text = [[RandomAccessText alloc] initWithPath:utf16GuWenPath encoding:NSUTF16StringEncoding];
+    Paginater *paginater = [[Paginater alloc] initWithRandomAccessText:text size:CGSizeMake(320, 480) font:[UIFont systemFontOfSize:17]];
+    
+    NSDate *beginTime = [NSDate date];
+    [paginater paginate];
+    NSLog(@"used time %lfs, pageCount %d", [[NSDate date] timeIntervalSinceDate:beginTime], [paginater pageCount]);
+    
+    // NSLog(@"content of page 3: %@", [paginater stringOfPage:3]);
+    NSString *str = [paginater stringOfPage:3];
+    NSLog(@"%@", str);
+
     
     return YES;
 }
