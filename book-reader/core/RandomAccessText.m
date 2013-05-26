@@ -50,7 +50,7 @@
     NSString *result = [[NSString alloc] initWithData:data encoding:_encoding];
 
     if (!result) result = @"";
-    return result;
+    return [result copy];
 }
 
 @end

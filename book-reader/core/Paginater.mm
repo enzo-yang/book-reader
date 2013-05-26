@@ -35,7 +35,7 @@ using namespace std;
 
 
 - (void)paginate {
-    const int charsPerLoad = 200000;
+    const int charsPerLoad = 50000;
     
     NSString *buffer = [_text textInRange:NSMakeRange(0, charsPerLoad)];
     NSAttributedString *attrString = [[NSAttributedString  alloc] initWithString:buffer];
@@ -69,6 +69,7 @@ using namespace std;
                     _pageOffsets.push_back(currentOffset);
                 }
             }
+            break;
         }
         
         _pageOffsets.push_back(currentOffset);

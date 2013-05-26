@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C6111CA8170EF30000755439 /* 诗经-gb18030.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6111CA7170EF30000755439 /* 诗经-gb18030.txt */; };
+		C60A8F2B1752017A00888BE7 /* 古文观止-utf16le.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F2A1752017A00888BE7 /* 古文观止-utf16le.txt */; };
+		C60A8F2D1752338800888BE7 /* 古文观止-utf16.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F2C1752338800888BE7 /* 古文观止-utf16.txt */; };
+		C60A8F2F175233CF00888BE7 /* 诗经-gb18030.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F2E175233CF00888BE7 /* 诗经-gb18030.txt */; };
+		C60A8F331752362200888BE7 /* harry-porter.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F321752362200888BE7 /* harry-porter.txt */; };
 		C6111CAB170EF4FA00755439 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111CAA170EF4FA00755439 /* FileTools.m */; };
 		C6111CAC170EF4FA00755439 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111CAA170EF4FA00755439 /* FileTools.m */; };
 		C6111CAE170F07C900755439 /* 古文观止-utf8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6111CAD170F07C900755439 /* 古文观止-utf8.txt */; };
@@ -15,15 +18,10 @@
 		C63E43A317512C0500FFBA23 /* RandomAccessText.m in Sources */ = {isa = PBXBuildFile; fileRef = C65149DB174FC9AC00B1E330 /* RandomAccessText.m */; };
 		C63E43A417512EBD00FFBA23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE4170926600010858A /* CoreGraphics.framework */; };
 		C642DB1A1710000A00A4A5EA /* 古文观止-big5.txt in Resources */ = {isa = PBXBuildFile; fileRef = C642DB141710000A00A4A5EA /* 古文观止-big5.txt */; };
-		C642DB1B1710000A00A4A5EA /* 古文观止-utf16.txt in Resources */ = {isa = PBXBuildFile; fileRef = C642DB151710000A00A4A5EA /* 古文观止-utf16.txt */; };
-		C642DB1C1710000A00A4A5EA /* 古文观止-utf16le.txt in Resources */ = {isa = PBXBuildFile; fileRef = C642DB161710000A00A4A5EA /* 古文观止-utf16le.txt */; };
 		C642DB1D1710000A00A4A5EA /* 诗经-utf8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C642DB171710000A00A4A5EA /* 诗经-utf8.txt */; };
-		C642DB1E1710000A00A4A5EA /* 诗经-utf16be.txt in Resources */ = {isa = PBXBuildFile; fileRef = C642DB181710000A00A4A5EA /* 诗经-utf16be.txt */; };
-		C642DB1F1710000A00A4A5EA /* 诗经-utf16le.txt in Resources */ = {isa = PBXBuildFile; fileRef = C642DB191710000A00A4A5EA /* 诗经-utf16le.txt */; };
 		C65149D9174FBEEF00B1E330 /* 文学少女-Shift-JIS.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65149D8174FBEEF00B1E330 /* 文学少女-Shift-JIS.txt */; };
 		C65149DC174FC9AC00B1E330 /* RandomAccessText.m in Sources */ = {isa = PBXBuildFile; fileRef = C65149DB174FC9AC00B1E330 /* RandomAccessText.m */; };
 		C65149DF175053D600B1E330 /* Paginater.mm in Sources */ = {isa = PBXBuildFile; fileRef = C65149DE175053D600B1E330 /* Paginater.mm */; };
-		C66F370A170A77C900B27F1A /* big5.txt in Resources */ = {isa = PBXBuildFile; fileRef = C66F3709170A77C900B27F1A /* big5.txt */; };
 		C66F370F170A7D8500B27F1A /* FileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C66F370E170A7D8500B27F1A /* FileScanner.m */; };
 		C66F3710170A7D8500B27F1A /* FileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C66F370E170A7D8500B27F1A /* FileScanner.m */; };
 		C679BEE1170926600010858A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE0170926600010858A /* UIKit.framework */; };
@@ -40,13 +38,6 @@
 		C679BF01170926600010858A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE2170926600010858A /* Foundation.framework */; };
 		C679BF09170926600010858A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C679BF07170926600010858A /* InfoPlist.strings */; };
 		C679BF0C170926600010858A /* book_readerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C679BF0B170926600010858A /* book_readerTests.m */; };
-		C679BF1D170931B10010858A /* ascii.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF16170931B10010858A /* ascii.txt */; };
-		C679BF1E170931B10010858A /* gb18030.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF17170931B10010858A /* gb18030.txt */; };
-		C679BF1F170931B10010858A /* japanese-euc.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF18170931B10010858A /* japanese-euc.txt */; };
-		C679BF20170931B10010858A /* shift-jis.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF19170931B10010858A /* shift-jis.txt */; };
-		C679BF21170931B10010858A /* utf-16-be.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF1A170931B10010858A /* utf-16-be.txt */; };
-		C679BF22170931B10010858A /* utf-16-le.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF1B170931B10010858A /* utf-16-le.txt */; };
-		C679BF23170931B10010858A /* utf-8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C679BF1C170931B10010858A /* utf-8.txt */; };
 		C6DF6B611751CB3E006C0523 /* 古文观止-utf16.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6DF6B601751CB3E006C0523 /* 古文观止-utf16.txt */; };
 		C6E295C417508B6800B8F28D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E295C317508B6800B8F28D /* CoreText.framework */; };
 		C6E295C517508B7200B8F28D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E295C317508B6800B8F28D /* CoreText.framework */; };
@@ -63,22 +54,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C6111CA7170EF30000755439 /* 诗经-gb18030.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "诗经-gb18030.txt"; sourceTree = "<group>"; };
+		C60A8F2A1752017A00888BE7 /* 古文观止-utf16le.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf16le.txt"; sourceTree = "<group>"; };
+		C60A8F2C1752338800888BE7 /* 古文观止-utf16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf16.txt"; sourceTree = "<group>"; };
+		C60A8F2E175233CF00888BE7 /* 诗经-gb18030.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "诗经-gb18030.txt"; sourceTree = "<group>"; };
+		C60A8F321752362200888BE7 /* harry-porter.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "harry-porter.txt"; sourceTree = "<group>"; };
 		C6111CA9170EF4FA00755439 /* FileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTools.h; sourceTree = "<group>"; };
 		C6111CAA170EF4FA00755439 /* FileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTools.m; sourceTree = "<group>"; };
 		C6111CAD170F07C900755439 /* 古文观止-utf8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf8.txt"; sourceTree = "<group>"; };
 		C642DB141710000A00A4A5EA /* 古文观止-big5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-big5.txt"; sourceTree = "<group>"; };
-		C642DB151710000A00A4A5EA /* 古文观止-utf16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf16.txt"; sourceTree = "<group>"; };
-		C642DB161710000A00A4A5EA /* 古文观止-utf16le.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf16le.txt"; sourceTree = "<group>"; };
 		C642DB171710000A00A4A5EA /* 诗经-utf8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "诗经-utf8.txt"; sourceTree = "<group>"; };
-		C642DB181710000A00A4A5EA /* 诗经-utf16be.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "诗经-utf16be.txt"; sourceTree = "<group>"; };
-		C642DB191710000A00A4A5EA /* 诗经-utf16le.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "诗经-utf16le.txt"; sourceTree = "<group>"; };
 		C65149D8174FBEEF00B1E330 /* 文学少女-Shift-JIS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "文学少女-Shift-JIS.txt"; sourceTree = "<group>"; };
 		C65149DA174FC9AC00B1E330 /* RandomAccessText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomAccessText.h; sourceTree = "<group>"; };
 		C65149DB174FC9AC00B1E330 /* RandomAccessText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomAccessText.m; sourceTree = "<group>"; };
 		C65149DD175053D600B1E330 /* Paginater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paginater.h; sourceTree = "<group>"; };
 		C65149DE175053D600B1E330 /* Paginater.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Paginater.mm; sourceTree = "<group>"; };
-		C66F3709170A77C900B27F1A /* big5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = big5.txt; sourceTree = "<group>"; };
 		C66F370D170A7D8500B27F1A /* FileScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileScanner.h; sourceTree = "<group>"; };
 		C66F370E170A7D8500B27F1A /* FileScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileScanner.m; sourceTree = "<group>"; };
 		C679BEDD170926600010858A /* book-reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "book-reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,13 +89,6 @@
 		C679BF08170926600010858A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C679BF0A170926600010858A /* book_readerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = book_readerTests.h; sourceTree = "<group>"; };
 		C679BF0B170926600010858A /* book_readerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = book_readerTests.m; sourceTree = "<group>"; };
-		C679BF16170931B10010858A /* ascii.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ascii.txt; sourceTree = "<group>"; };
-		C679BF17170931B10010858A /* gb18030.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gb18030.txt; sourceTree = "<group>"; };
-		C679BF18170931B10010858A /* japanese-euc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "japanese-euc.txt"; sourceTree = "<group>"; };
-		C679BF19170931B10010858A /* shift-jis.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "shift-jis.txt"; sourceTree = "<group>"; };
-		C679BF1A170931B10010858A /* utf-16-be.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utf-16-be.txt"; sourceTree = "<group>"; };
-		C679BF1B170931B10010858A /* utf-16-le.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utf-16-le.txt"; sourceTree = "<group>"; };
-		C679BF1C170931B10010858A /* utf-8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utf-8.txt"; sourceTree = "<group>"; };
 		C6DF6B601751CB3E006C0523 /* 古文观止-utf16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf16.txt"; sourceTree = "<group>"; };
 		C6E295C317508B6800B8F28D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -206,6 +188,7 @@
 		C679BEE7170926600010858A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C60A8F2A1752017A00888BE7 /* 古文观止-utf16le.txt */,
 				C6DF6B601751CB3E006C0523 /* 古文观止-utf16.txt */,
 				C679BEE8170926600010858A /* book-reader-Info.plist */,
 				C679BEE9170926600010858A /* InfoPlist.strings */,
@@ -241,23 +224,13 @@
 		C679BF15170931B10010858A /* texts */ = {
 			isa = PBXGroup;
 			children = (
+				C60A8F321752362200888BE7 /* harry-porter.txt */,
+				C60A8F2E175233CF00888BE7 /* 诗经-gb18030.txt */,
+				C60A8F2C1752338800888BE7 /* 古文观止-utf16.txt */,
 				C65149D8174FBEEF00B1E330 /* 文学少女-Shift-JIS.txt */,
 				C642DB141710000A00A4A5EA /* 古文观止-big5.txt */,
-				C642DB151710000A00A4A5EA /* 古文观止-utf16.txt */,
-				C642DB161710000A00A4A5EA /* 古文观止-utf16le.txt */,
 				C642DB171710000A00A4A5EA /* 诗经-utf8.txt */,
-				C642DB181710000A00A4A5EA /* 诗经-utf16be.txt */,
-				C642DB191710000A00A4A5EA /* 诗经-utf16le.txt */,
 				C6111CAD170F07C900755439 /* 古文观止-utf8.txt */,
-				C6111CA7170EF30000755439 /* 诗经-gb18030.txt */,
-				C66F3709170A77C900B27F1A /* big5.txt */,
-				C679BF16170931B10010858A /* ascii.txt */,
-				C679BF17170931B10010858A /* gb18030.txt */,
-				C679BF18170931B10010858A /* japanese-euc.txt */,
-				C679BF19170931B10010858A /* shift-jis.txt */,
-				C679BF1A170931B10010858A /* utf-16-be.txt */,
-				C679BF1B170931B10010858A /* utf-16-le.txt */,
-				C679BF1C170931B10010858A /* utf-8.txt */,
 			);
 			path = texts;
 			sourceTree = "<group>";
@@ -338,6 +311,7 @@
 				C679BEF5170926600010858A /* Default@2x.png in Resources */,
 				C679BEF7170926600010858A /* Default-568h@2x.png in Resources */,
 				C6DF6B611751CB3E006C0523 /* 古文观止-utf16.txt in Resources */,
+				C60A8F2B1752017A00888BE7 /* 古文观止-utf16le.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,23 +320,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C679BF09170926600010858A /* InfoPlist.strings in Resources */,
-				C679BF1D170931B10010858A /* ascii.txt in Resources */,
-				C679BF1E170931B10010858A /* gb18030.txt in Resources */,
-				C679BF1F170931B10010858A /* japanese-euc.txt in Resources */,
-				C679BF20170931B10010858A /* shift-jis.txt in Resources */,
-				C679BF21170931B10010858A /* utf-16-be.txt in Resources */,
-				C679BF22170931B10010858A /* utf-16-le.txt in Resources */,
-				C679BF23170931B10010858A /* utf-8.txt in Resources */,
-				C66F370A170A77C900B27F1A /* big5.txt in Resources */,
-				C6111CA8170EF30000755439 /* 诗经-gb18030.txt in Resources */,
 				C6111CAE170F07C900755439 /* 古文观止-utf8.txt in Resources */,
 				C642DB1A1710000A00A4A5EA /* 古文观止-big5.txt in Resources */,
-				C642DB1B1710000A00A4A5EA /* 古文观止-utf16.txt in Resources */,
-				C642DB1C1710000A00A4A5EA /* 古文观止-utf16le.txt in Resources */,
 				C642DB1D1710000A00A4A5EA /* 诗经-utf8.txt in Resources */,
-				C642DB1E1710000A00A4A5EA /* 诗经-utf16be.txt in Resources */,
-				C642DB1F1710000A00A4A5EA /* 诗经-utf16le.txt in Resources */,
 				C65149D9174FBEEF00B1E330 /* 文学少女-Shift-JIS.txt in Resources */,
+				C60A8F2D1752338800888BE7 /* 古文观止-utf16.txt in Resources */,
+				C60A8F2F175233CF00888BE7 /* 诗经-gb18030.txt in Resources */,
+				C60A8F331752362200888BE7 /* harry-porter.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
