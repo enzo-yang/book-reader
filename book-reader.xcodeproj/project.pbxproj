@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C60A8F2B1752017A00888BE7 /* 古文观止-utf16le.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F2A1752017A00888BE7 /* 古文观止-utf16le.txt */; };
 		C60A8F2D1752338800888BE7 /* 古文观止-utf16.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F2C1752338800888BE7 /* 古文观止-utf16.txt */; };
 		C60A8F2F175233CF00888BE7 /* 诗经-gb18030.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F2E175233CF00888BE7 /* 诗经-gb18030.txt */; };
 		C60A8F331752362200888BE7 /* harry-porter.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F321752362200888BE7 /* harry-porter.txt */; };
@@ -38,7 +37,11 @@
 		C679BF01170926600010858A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE2170926600010858A /* Foundation.framework */; };
 		C679BF09170926600010858A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C679BF07170926600010858A /* InfoPlist.strings */; };
 		C679BF0C170926600010858A /* book_readerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C679BF0B170926600010858A /* book_readerTests.m */; };
-		C6DF6B611751CB3E006C0523 /* 古文观止-utf16.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6DF6B601751CB3E006C0523 /* 古文观止-utf16.txt */; };
+		C6C0BAD917562A1500AFABF0 /* 古文观止-utf16le.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6C0BAD717562A1500AFABF0 /* 古文观止-utf16le.txt */; };
+		C6C0BADA17562A1500AFABF0 /* 古文观止-utf16.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6C0BAD817562A1500AFABF0 /* 古文观止-utf16.txt */; };
+		C6C0BADD17562A5700AFABF0 /* 屏幕快照 2013-05-28 下午5.40.15.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C0BADC17562A5700AFABF0 /* 屏幕快照 2013-05-28 下午5.40.15.png */; };
+		C6C0BAE017562A7600AFABF0 /* FileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C0BADF17562A7600AFABF0 /* FileUtil.m */; };
+		C6C0BAE117562A7600AFABF0 /* FileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C0BADF17562A7600AFABF0 /* FileUtil.m */; };
 		C6E295C417508B6800B8F28D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E295C317508B6800B8F28D /* CoreText.framework */; };
 		C6E295C517508B7200B8F28D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E295C317508B6800B8F28D /* CoreText.framework */; };
 /* End PBXBuildFile section */
@@ -54,7 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C60A8F2A1752017A00888BE7 /* 古文观止-utf16le.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf16le.txt"; sourceTree = "<group>"; };
 		C60A8F2C1752338800888BE7 /* 古文观止-utf16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf16.txt"; sourceTree = "<group>"; };
 		C60A8F2E175233CF00888BE7 /* 诗经-gb18030.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "诗经-gb18030.txt"; sourceTree = "<group>"; };
 		C60A8F321752362200888BE7 /* harry-porter.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "harry-porter.txt"; sourceTree = "<group>"; };
@@ -89,7 +91,11 @@
 		C679BF08170926600010858A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C679BF0A170926600010858A /* book_readerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = book_readerTests.h; sourceTree = "<group>"; };
 		C679BF0B170926600010858A /* book_readerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = book_readerTests.m; sourceTree = "<group>"; };
-		C6DF6B601751CB3E006C0523 /* 古文观止-utf16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf16.txt"; sourceTree = "<group>"; };
+		C6C0BAD717562A1500AFABF0 /* 古文观止-utf16le.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf16le.txt"; sourceTree = "<group>"; };
+		C6C0BAD817562A1500AFABF0 /* 古文观止-utf16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf16.txt"; sourceTree = "<group>"; };
+		C6C0BADC17562A5700AFABF0 /* 屏幕快照 2013-05-28 下午5.40.15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2013-05-28 下午5.40.15.png"; sourceTree = "<group>"; };
+		C6C0BADE17562A7600AFABF0 /* FileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtil.h; sourceTree = "<group>"; };
+		C6C0BADF17562A7600AFABF0 /* FileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtil.m; sourceTree = "<group>"; };
 		C6E295C317508B6800B8F28D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -135,13 +141,6 @@
 			path = core;
 			sourceTree = "<group>";
 		};
-		C66F3711170A8B2800B27F1A /* helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = helper;
-			sourceTree = "<group>";
-		};
 		C679BED4170926600010858A = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +175,7 @@
 		C679BEE6170926600010858A /* book-reader */ = {
 			isa = PBXGroup;
 			children = (
-				C66F3711170A8B2800B27F1A /* helper */,
+				C6C0BAD5175629C400AFABF0 /* helper */,
 				C66F370B170A7D0C00B27F1A /* core */,
 				C679BEEF170926600010858A /* AppDelegate.h */,
 				C679BEF0170926600010858A /* AppDelegate.m */,
@@ -188,8 +187,7 @@
 		C679BEE7170926600010858A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C60A8F2A1752017A00888BE7 /* 古文观止-utf16le.txt */,
-				C6DF6B601751CB3E006C0523 /* 古文观止-utf16.txt */,
+				C6C0BAD6175629F700AFABF0 /* resource */,
 				C679BEE8170926600010858A /* book-reader-Info.plist */,
 				C679BEE9170926600010858A /* InfoPlist.strings */,
 				C679BEEC170926600010858A /* main.m */,
@@ -233,6 +231,33 @@
 				C6111CAD170F07C900755439 /* 古文观止-utf8.txt */,
 			);
 			path = texts;
+			sourceTree = "<group>";
+		};
+		C6C0BAD5175629C400AFABF0 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				C6C0BADE17562A7600AFABF0 /* FileUtil.h */,
+				C6C0BADF17562A7600AFABF0 /* FileUtil.m */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		C6C0BAD6175629F700AFABF0 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				C6C0BADB17562A4000AFABF0 /* images */,
+				C6C0BAD717562A1500AFABF0 /* 古文观止-utf16le.txt */,
+				C6C0BAD817562A1500AFABF0 /* 古文观止-utf16.txt */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		C6C0BADB17562A4000AFABF0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C6C0BADC17562A5700AFABF0 /* 屏幕快照 2013-05-28 下午5.40.15.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,8 +335,9 @@
 				C679BEF3170926600010858A /* Default.png in Resources */,
 				C679BEF5170926600010858A /* Default@2x.png in Resources */,
 				C679BEF7170926600010858A /* Default-568h@2x.png in Resources */,
-				C6DF6B611751CB3E006C0523 /* 古文观止-utf16.txt in Resources */,
-				C60A8F2B1752017A00888BE7 /* 古文观止-utf16le.txt in Resources */,
+				C6C0BAD917562A1500AFABF0 /* 古文观止-utf16le.txt in Resources */,
+				C6C0BADA17562A1500AFABF0 /* 古文观止-utf16.txt in Resources */,
+				C6C0BADD17562A5700AFABF0 /* 屏幕快照 2013-05-28 下午5.40.15.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +385,7 @@
 				C6111CAB170EF4FA00755439 /* TextFileTools.m in Sources */,
 				C65149DC174FC9AC00B1E330 /* RandomAccessText.m in Sources */,
 				C65149DF175053D600B1E330 /* Paginater.mm in Sources */,
+				C6C0BAE017562A7600AFABF0 /* FileUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +398,7 @@
 				C6111CAC170EF4FA00755439 /* TextFileTools.m in Sources */,
 				C63E43A217512C0100FFBA23 /* Paginater.mm in Sources */,
 				C63E43A317512C0500FFBA23 /* RandomAccessText.m in Sources */,
+				C6C0BAE117562A7600AFABF0 /* FileUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

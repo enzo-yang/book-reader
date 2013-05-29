@@ -20,4 +20,7 @@
 - (NSUInteger)offsetOfPage:(NSUInteger)page;
 - (NSString *)stringOfPage:(NSUInteger)page;
 
+- (NSString *)pageInfoFileName;
+- (void)saveInFolder:(NSString *)folder;
+
 @end

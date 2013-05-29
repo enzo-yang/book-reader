@@ -126,4 +126,12 @@ using namespace std;
     return [_text textInRange:NSMakeRange(head, tail-head)];
 }
 
+- (NSString *)pageInfoFileName {
+    return [NSString stringWithFormat:@"page-info-%d-%d-%f-%@.txt", (int)_size.width, (int)_size.height, _font.pointSize, [_font.fontName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+}
+
+- (void)saveInFolder:(NSString *)folder {
+    
+}
+
 @end
