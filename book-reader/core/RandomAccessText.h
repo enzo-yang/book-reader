@@ -15,4 +15,6 @@
 
 - (NSString *)textInRange:(NSRange)range;
 
+- (NSString *)path;
+
 @end

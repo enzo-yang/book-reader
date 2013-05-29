@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 #import "Paginater.h"
-#import <CoreText/CoreText.h>
+#include <fstream>
+
+using namespace std;
 
 @interface AppDelegate()
 @end

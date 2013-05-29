@@ -9,6 +9,7 @@
 #import "book_readerTests.h"
 #import "TextFileTools.h"
 #import "Paginater.h"
+#import "FileUtil.h"
 
 @implementation book_readerTests
 
@@ -60,13 +61,18 @@
 
 - (void)testWenxuePagination {
     NSString *utf16BEWenXuePath = [NSHomeDirectory() stringByAppendingPathComponent:@"文学少女-utf16be.txt"];
+    
     RandomAccessText *text = [[RandomAccessText alloc] initWithPath:utf16BEWenXuePath encoding:NSUTF16BigEndianStringEncoding];
     
     Paginater *paginater = [[Paginater alloc] initWithRandomAccessText:text size:CGSizeMake(320, 480) font:[UIFont systemFontOfSize:17]];
     
     NSDate *beginTime = [NSDate date];
-    [paginater paginate];
-    NSLog(@"used time %lfs, pageCount %d", [[NSDate date] timeIntervalSinceDate:beginTime], [paginater pageCount]);
+    if ([paginater isPaginated]) {
+      NSLog(@"has paginated, %@", paginater);
+    } else {
+        [paginater paginate];
+        NSLog(@"used time %lfs, pageCount %d", [[NSDate date] timeIntervalSinceDate:beginTime], [paginater pageCount]);
+    }
     
     NSString *str = [paginater stringOfPage:3];
     NSLog(@"%@", str);

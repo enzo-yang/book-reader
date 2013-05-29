@@ -8,6 +8,8 @@
 
 #import "Paginater.h"
 #include <vector>
+#include <fstream>
+#include <iostream>
 #import <CoreText/CoreText.h>
 
 using namespace std;
@@ -25,12 +27,14 @@ using namespace std;
         _text = text;
         _font = font;
         _size = size;
+        [self load];
     }
     return self;
 }
 
+
 - (BOOL)isPaginated {
-    return _pageOffsets.size() == 0;
+    return _pageOffsets.size() != 0;
 }
 
 
@@ -103,6 +107,8 @@ using namespace std;
     
     CGPathRelease(path);
     CFRelease(frameSetter);
+    
+    [self save];
 }
 
 - (NSUInteger)pageCount {
@@ -130,8 +136,45 @@ using namespace std;
     return [NSString stringWithFormat:@"page-info-%d-%d-%f-%@.txt", (int)_size.width, (int)_size.height, _font.pointSize, [_font.fontName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 }
 
-- (void)saveInFolder:(NSString *)folder {
-    
+- (NSString *)pageInfoFilePath {
+    return [[_text.path stringByDeletingLastPathComponent] stringByAppendingPathComponent:[self pageInfoFileName]];
+}
+
+- (void)save {
+    ofstream stream([[self pageInfoFilePath] UTF8String]);
+    NSLog(@"%@", [self pageInfoFilePath]);
+    if (stream.is_open()) {
+        stream << [self pageCount] << endl;
+        for (vector<NSUInteger>::iterator iter = _pageOffsets.begin(); iter != _pageOffsets.end(); ++iter) {
+            stream << *iter << endl;
+        }
+    }
+    stream.close();
+}
+
+- (void)load {
+    ifstream stream([[self pageInfoFilePath] UTF8String]);
+    NSLog(@"%@", [self pageInfoFilePath]);
+    vector<NSUInteger> offsets;
+    if (stream.is_open()) {
+        NSUInteger cnt;
+        stream >> cnt;
+        NSLog(@"cnt %d", cnt);
+        if (cnt && stream.good()) {
+            int tmp = 0;
+            for (int i=0; i<cnt && !stream.eof(); ++i) {
+                stream >> tmp;
+                offsets.push_back(tmp);
+            }
+        }
+    }
+    stream.close();
+
+    _pageOffsets.swap(offsets);
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"size:{%f, %f}, font: %@, pages: %d", _size.width, _size.height, _font, [self pageCount]];
 }
 
 @end

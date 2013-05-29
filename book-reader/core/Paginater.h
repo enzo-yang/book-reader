@@ -21,6 +21,6 @@
 - (NSString *)stringOfPage:(NSUInteger)page;
 
 - (NSString *)pageInfoFileName;
-- (void)saveInFolder:(NSString *)folder;
+- (void)save;
 
 @end

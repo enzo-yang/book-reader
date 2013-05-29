@@ -12,6 +12,7 @@
     NSData              *_buffer;
     int                 _bytesAChar;
     NSStringEncoding    _encoding;
+    NSString            *_path;
 }
 - (id)initWithPath:(NSString *)path encoding:(NSStringEncoding)encoding {
     self = [super init];
@@ -26,6 +27,7 @@
         
         _encoding = encoding;
         _buffer = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedAlways error:nil];
+        _path   = path;
         if (!_buffer) {
             self = nil;
         }
@@ -51,6 +53,10 @@
 
     if (!result) result = @"";
     return [result copy];
+}
+
+- (NSString *)path {
+    return _path;
 }
 
 @end

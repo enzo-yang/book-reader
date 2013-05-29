@@ -10,6 +10,7 @@
 		C60A8F2D1752338800888BE7 /* 古文观止-utf16.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F2C1752338800888BE7 /* 古文观止-utf16.txt */; };
 		C60A8F2F175233CF00888BE7 /* 诗经-gb18030.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F2E175233CF00888BE7 /* 诗经-gb18030.txt */; };
 		C60A8F331752362200888BE7 /* harry-porter.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F321752362200888BE7 /* harry-porter.txt */; };
+		C60A8F3517564A5D00888BE7 /* 文学少女-utf16be.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F3417564A5D00888BE7 /* 文学少女-utf16be.txt */; };
 		C6111CAB170EF4FA00755439 /* TextFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111CAA170EF4FA00755439 /* TextFileTools.m */; };
 		C6111CAC170EF4FA00755439 /* TextFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111CAA170EF4FA00755439 /* TextFileTools.m */; };
 		C6111CAE170F07C900755439 /* 古文观止-utf8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6111CAD170F07C900755439 /* 古文观止-utf8.txt */; };
@@ -28,7 +29,7 @@
 		C679BEE5170926600010858A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE4170926600010858A /* CoreGraphics.framework */; };
 		C679BEEB170926600010858A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C679BEE9170926600010858A /* InfoPlist.strings */; };
 		C679BEED170926600010858A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C679BEEC170926600010858A /* main.m */; };
-		C679BEF1170926600010858A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C679BEF0170926600010858A /* AppDelegate.m */; };
+		C679BEF1170926600010858A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C679BEF0170926600010858A /* AppDelegate.mm */; };
 		C679BEF3170926600010858A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C679BEF2170926600010858A /* Default.png */; };
 		C679BEF5170926600010858A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C679BEF4170926600010858A /* Default@2x.png */; };
 		C679BEF7170926600010858A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C679BEF6170926600010858A /* Default-568h@2x.png */; };
@@ -60,6 +61,7 @@
 		C60A8F2C1752338800888BE7 /* 古文观止-utf16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf16.txt"; sourceTree = "<group>"; };
 		C60A8F2E175233CF00888BE7 /* 诗经-gb18030.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "诗经-gb18030.txt"; sourceTree = "<group>"; };
 		C60A8F321752362200888BE7 /* harry-porter.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "harry-porter.txt"; sourceTree = "<group>"; };
+		C60A8F3417564A5D00888BE7 /* 文学少女-utf16be.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "文学少女-utf16be.txt"; sourceTree = "<group>"; };
 		C6111CA9170EF4FA00755439 /* TextFileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFileTools.h; sourceTree = "<group>"; };
 		C6111CAA170EF4FA00755439 /* TextFileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFileTools.m; sourceTree = "<group>"; };
 		C6111CAD170F07C900755439 /* 古文观止-utf8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf8.txt"; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		C679BEEC170926600010858A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C679BEEE170926600010858A /* book-reader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "book-reader-Prefix.pch"; sourceTree = "<group>"; };
 		C679BEEF170926600010858A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C679BEF0170926600010858A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C679BEF0170926600010858A /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		C679BEF2170926600010858A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C679BEF4170926600010858A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C679BEF6170926600010858A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -178,7 +180,7 @@
 				C6C0BAD5175629C400AFABF0 /* helper */,
 				C66F370B170A7D0C00B27F1A /* core */,
 				C679BEEF170926600010858A /* AppDelegate.h */,
-				C679BEF0170926600010858A /* AppDelegate.m */,
+				C679BEF0170926600010858A /* AppDelegate.mm */,
 				C679BEE7170926600010858A /* Supporting Files */,
 			);
 			path = "book-reader";
@@ -222,6 +224,7 @@
 		C679BF15170931B10010858A /* texts */ = {
 			isa = PBXGroup;
 			children = (
+				C60A8F3417564A5D00888BE7 /* 文学少女-utf16be.txt */,
 				C60A8F321752362200888BE7 /* harry-porter.txt */,
 				C60A8F2E175233CF00888BE7 /* 诗经-gb18030.txt */,
 				C60A8F2C1752338800888BE7 /* 古文观止-utf16.txt */,
@@ -353,6 +356,7 @@
 				C60A8F2D1752338800888BE7 /* 古文观止-utf16.txt in Resources */,
 				C60A8F2F175233CF00888BE7 /* 诗经-gb18030.txt in Resources */,
 				C60A8F331752362200888BE7 /* harry-porter.txt in Resources */,
+				C60A8F3517564A5D00888BE7 /* 文学少女-utf16be.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C679BEED170926600010858A /* main.m in Sources */,
-				C679BEF1170926600010858A /* AppDelegate.m in Sources */,
+				C679BEF1170926600010858A /* AppDelegate.mm in Sources */,
 				C66F370F170A7D8500B27F1A /* TextFileScanner.m in Sources */,
 				C6111CAB170EF4FA00755439 /* TextFileTools.m in Sources */,
 				C65149DC174FC9AC00B1E330 /* RandomAccessText.m in Sources */,
