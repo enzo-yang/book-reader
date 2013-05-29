@@ -6,14 +6,14 @@
 //  Copyright (c) 2013年 SideTrip. All rights reserved.
 //
 
-#import "FileTools.h"
+#import "TextFileTools.h"
 
 
 const NSStringEncoding kUnknownStringEncoding = -1;
 
-@implementation FileTools
+@implementation TextFileTools
 
-+ (BOOL)convertFile:(FileScanner *)scanner toEncoding:(NSStringEncoding)encoding dest:(NSString *)destPath {
++ (BOOL)convertFile:(TextFileScanner *)scanner toEncoding:(NSStringEncoding)encoding dest:(NSString *)destPath {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:destPath]) {
         [fileManager removeItemAtPath:destPath error:nil];
@@ -64,7 +64,7 @@ const NSStringEncoding kUnknownStringEncoding = -1;
     [fileHandle closeFile]; fileHandle = nil;
     if (encoding != kUnknownStringEncoding) return encoding;
     
-    FileScannerUTF8 *scanner = [[FileScannerUTF8 alloc] initWithPath:path];
+    TextFileScannerUTF8 *scanner = [[TextFileScannerUTF8 alloc] initWithPath:path];
     while (![scanner isEndOfFile]) {
         @autoreleasepool {
             [scanner nextNChar:2000];

@@ -6,12 +6,12 @@
 //  Copyright (c) 2013年 SideTrip. All rights reserved.
 //
 
-#import "FileScanner.h"
+#import "TextFileScanner.h"
 
 extern const NSStringEncoding kUnknownStringEncoding;
 const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 
-@interface FileScanner()
+@interface TextFileScanner()
 
 @property (nonatomic, strong, readwrite) NSString *path;
 @property (nonatomic, assign, readwrite) int size;
@@ -23,49 +23,49 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 
 @end
 
-@implementation FileScanner
+@implementation TextFileScanner
 
-+ (FileScanner *)fileScannerOfFile:(NSString *)path encoding:(NSStringEncoding)encoding {
++ (TextFileScanner *)fileScannerOfFile:(NSString *)path encoding:(NSStringEncoding)encoding {
     if (encoding == kUnknownStringEncoding) return nil;
     
-    FileScanner *result = [self fileScannerRandomAccessOfFile:path encoding:encoding];
+    TextFileScanner *result = [self fileScannerRandomAccessOfFile:path encoding:encoding];
     if (result) return result;
     
     NSStringEncoding GB18030Encoding    = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
     NSStringEncoding BIG5Encoding       = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingBig5_HKSCS_1999);
     
     if (encoding == NSUTF8StringEncoding) {
-        result = [[FileScannerUTF8 alloc] initWithPath:path];
+        result = [[TextFileScannerUTF8 alloc] initWithPath:path];
     } else if (encoding == GB18030Encoding) {
-        result = [[FileScannerGB18030 alloc] initWithPath:path];
+        result = [[TextFileScannerGB18030 alloc] initWithPath:path];
     } else if (encoding == BIG5Encoding) {
-        result = [[FileScannerBIG5 alloc] initWithPath:path];
+        result = [[TextFileScannerBIG5 alloc] initWithPath:path];
     } else {
-        result = [[FileScannerByLine alloc] initWithPath:path encoding:encoding];
+        result = [[TextFileScannerByLine alloc] initWithPath:path encoding:encoding];
     }
     
     return result;
 }
 
-+ (FileScannerRandomAccess *)fileScannerRandomAccessOfFile:(NSString *)path encoding:(NSStringEncoding)encoding {
-    FileScannerRandomAccess *result = nil;
++ (TextFileScannerRandomAccess *)fileScannerRandomAccessOfFile:(NSString *)path encoding:(NSStringEncoding)encoding {
+    TextFileScannerRandomAccess *result = nil;
     if (encoding == NSASCIIStringEncoding ||
         encoding == NSISOLatin1StringEncoding ||
         encoding == NSISOLatin2StringEncoding ) {
         
-        result = [[FileScannerLatin alloc] initWithPath:path encoding:encoding];
+        result = [[TextFileScannerLatin alloc] initWithPath:path encoding:encoding];
         
     } else if (encoding == NSUTF16LittleEndianStringEncoding ||
                encoding == NSUTF16BigEndianStringEncoding ) {
         
-        result = [[FileScannerUTF16 alloc] initWithPath:path encoding:encoding];
+        result = [[TextFileScannerUTF16 alloc] initWithPath:path encoding:encoding];
     }
     
     return result;
 }
 
-+ (FileScannerByLine *)fileScannerByLineOfFile:(NSString *)path encoding:(NSStringEncoding)encoding {
-    FileScannerByLine *scanner = [[FileScannerByLine alloc] initWithPath:path encoding:encoding];
++ (TextFileScannerByLine *)fileScannerByLineOfFile:(NSString *)path encoding:(NSStringEncoding)encoding {
+    TextFileScannerByLine *scanner = [[TextFileScannerByLine alloc] initWithPath:path encoding:encoding];
     return scanner;
 }
 
@@ -117,7 +117,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 
 @end
 
-@implementation FileScannerRandomAccess {
+@implementation TextFileScannerRandomAccess {
     @protected
     int _bytesAChar;
 }
@@ -141,7 +141,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 
 @end
 
-@implementation FileScannerUTF16
+@implementation TextFileScannerUTF16
 
 - (id)initWithPath:(NSString *)path encoding:(NSStringEncoding)encoding {
     self = [super initWithPath:path encoding:encoding];
@@ -170,7 +170,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 
 @end
 
-@implementation FileScannerLatin
+@implementation TextFileScannerLatin
 
 - (id)initWithPath:(NSString *)path encoding:(NSStringEncoding)encoding {
     self = [super initWithPath:path encoding:encoding];
@@ -193,7 +193,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 }
 @end
 
-@interface FileScannerOrderAccess()
+@interface TextFileScannerOrderAccess()
 
 @property (nonatomic, strong) NSData    *data;
 @property (nonatomic, assign) int       innerOffset;
@@ -204,7 +204,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 
 @end
 
-@implementation FileScannerOrderAccess
+@implementation TextFileScannerOrderAccess
 
 - (id)initWithPath:(NSString *)path encoding:(NSStringEncoding)encoding {
     self = [super initWithPath:path encoding:encoding];
@@ -249,11 +249,11 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 
 @end
 
-@interface FileScannerUTF8()
+@interface TextFileScannerUTF8()
 @property (nonatomic, assign, readwrite) int noneSingleByteCharCount;
 @end
 
-@implementation FileScannerUTF8
+@implementation TextFileScannerUTF8
 
 - (id)initWithPath:(NSString *)path {
     self = [super initWithPath:path encoding:NSUTF8StringEncoding];
@@ -363,7 +363,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 @end
 
 
-@implementation FileScannerGB18030
+@implementation TextFileScannerGB18030
 
 - (id)initWithPath:(NSString *)path {
     NSStringEncoding encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
@@ -460,7 +460,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 @end
 
 // 和GB18030差不多
-@implementation FileScannerBIG5
+@implementation TextFileScannerBIG5
 
 - (id)initWithPath:(NSString *)path {
     NSStringEncoding encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingBig5_HKSCS_1999);
@@ -537,7 +537,7 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
 
 @end
 
-@implementation FileScannerByLine {
+@implementation TextFileScannerByLine {
     int _offsetInBuffer;
     
     NSData *_buffer;

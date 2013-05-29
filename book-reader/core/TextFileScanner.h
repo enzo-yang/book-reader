@@ -14,10 +14,10 @@
 
 extern const NSInteger kFileScannerTolerateMaxInvalidCount;
 
-@class FileScannerRandomAccess;
-@class FileScannerByLine;
+@class TextFileScannerRandomAccess;
+@class TextFileScannerByLine;
 
-@interface FileScanner : NSObject
+@interface TextFileScanner : NSObject
 
 @property (nonatomic, strong, readonly) NSString *path;
 @property (nonatomic, assign, readonly) int size;
@@ -25,9 +25,9 @@ extern const NSInteger kFileScannerTolerateMaxInvalidCount;
 @property (nonatomic, assign, readonly) BOOL canRandomAccess;
 @property (nonatomic, assign, readonly) int invalidCount; // 错误编码个数
 
-+ (FileScanner *)fileScannerOfFile:(NSString *)path encoding:(NSStringEncoding)encoding;
-+ (FileScannerRandomAccess *)fileScannerRandomAccessOfFile:(NSString *)path encoding:(NSStringEncoding)encoding;
-+ (FileScannerByLine *)fileScannerByLineOfFile:(NSString *)path encoding:(NSStringEncoding)encoding;
++ (TextFileScanner *)fileScannerOfFile:(NSString *)path encoding:(NSStringEncoding)encoding;
++ (TextFileScannerRandomAccess *)fileScannerRandomAccessOfFile:(NSString *)path encoding:(NSStringEncoding)encoding;
++ (TextFileScannerByLine *)fileScannerByLineOfFile:(NSString *)path encoding:(NSStringEncoding)encoding;
 
 - (id)initWithPath:(NSString *)path encoding:(NSStringEncoding)encoding;
 - (NSString *)nextNChar:(int)n;
@@ -37,39 +37,39 @@ extern const NSInteger kFileScannerTolerateMaxInvalidCount;
 @end
 
 // 定长字符编码可以随机读取
-@interface FileScannerRandomAccess :FileScanner
+@interface TextFileScannerRandomAccess :TextFileScanner
 // offset 以字符为单位
 - (NSString *)nextNChar:(int)n from:(int)offset;
 @end
 
-@interface FileScannerUTF16 : FileScannerRandomAccess
+@interface TextFileScannerUTF16 : TextFileScannerRandomAccess
 @end
 
-@interface FileScannerLatin : FileScannerRandomAccess
+@interface TextFileScannerLatin : TextFileScannerRandomAccess
 @end
 
 
 // 变长字符编码只能按顺序读
-@interface FileScannerOrderAccess : FileScanner
+@interface TextFileScannerOrderAccess : TextFileScanner
 // 不要实例化这个东西
 @end
 
-@interface FileScannerUTF8 : FileScannerOrderAccess
+@interface TextFileScannerUTF8 : TextFileScannerOrderAccess
 @property (nonatomic, assign, readonly) int noneSingleByteCharCount; // 用于判断是否纯英文
 - (id)initWithPath:(NSString *)path;
 @end
 
-@interface FileScannerGB18030 : FileScannerOrderAccess
+@interface TextFileScannerGB18030 : TextFileScannerOrderAccess
 - (id)initWithPath:(NSString *)path;
 @end
 
 // 仅用 kCFStringEncodingBig5_HKSCS_1999 已经足够
-@interface FileScannerBIG5 : FileScannerOrderAccess
+@interface TextFileScannerBIG5 : TextFileScannerOrderAccess
 - (id)initWithPath:(NSString *)path;
 @end
 
 // 
-@interface FileScannerByLine : FileScanner
+@interface TextFileScannerByLine : TextFileScanner
 
 // 包括换行符
 - (NSString *)nextLine;

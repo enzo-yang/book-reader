@@ -11,8 +11,8 @@
 		C60A8F2D1752338800888BE7 /* 古文观止-utf16.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F2C1752338800888BE7 /* 古文观止-utf16.txt */; };
 		C60A8F2F175233CF00888BE7 /* 诗经-gb18030.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F2E175233CF00888BE7 /* 诗经-gb18030.txt */; };
 		C60A8F331752362200888BE7 /* harry-porter.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F321752362200888BE7 /* harry-porter.txt */; };
-		C6111CAB170EF4FA00755439 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111CAA170EF4FA00755439 /* FileTools.m */; };
-		C6111CAC170EF4FA00755439 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111CAA170EF4FA00755439 /* FileTools.m */; };
+		C6111CAB170EF4FA00755439 /* TextFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111CAA170EF4FA00755439 /* TextFileTools.m */; };
+		C6111CAC170EF4FA00755439 /* TextFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111CAA170EF4FA00755439 /* TextFileTools.m */; };
 		C6111CAE170F07C900755439 /* 古文观止-utf8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6111CAD170F07C900755439 /* 古文观止-utf8.txt */; };
 		C63E43A217512C0100FFBA23 /* Paginater.mm in Sources */ = {isa = PBXBuildFile; fileRef = C65149DE175053D600B1E330 /* Paginater.mm */; };
 		C63E43A317512C0500FFBA23 /* RandomAccessText.m in Sources */ = {isa = PBXBuildFile; fileRef = C65149DB174FC9AC00B1E330 /* RandomAccessText.m */; };
@@ -22,8 +22,8 @@
 		C65149D9174FBEEF00B1E330 /* 文学少女-Shift-JIS.txt in Resources */ = {isa = PBXBuildFile; fileRef = C65149D8174FBEEF00B1E330 /* 文学少女-Shift-JIS.txt */; };
 		C65149DC174FC9AC00B1E330 /* RandomAccessText.m in Sources */ = {isa = PBXBuildFile; fileRef = C65149DB174FC9AC00B1E330 /* RandomAccessText.m */; };
 		C65149DF175053D600B1E330 /* Paginater.mm in Sources */ = {isa = PBXBuildFile; fileRef = C65149DE175053D600B1E330 /* Paginater.mm */; };
-		C66F370F170A7D8500B27F1A /* FileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C66F370E170A7D8500B27F1A /* FileScanner.m */; };
-		C66F3710170A7D8500B27F1A /* FileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C66F370E170A7D8500B27F1A /* FileScanner.m */; };
+		C66F370F170A7D8500B27F1A /* TextFileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C66F370E170A7D8500B27F1A /* TextFileScanner.m */; };
+		C66F3710170A7D8500B27F1A /* TextFileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C66F370E170A7D8500B27F1A /* TextFileScanner.m */; };
 		C679BEE1170926600010858A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE0170926600010858A /* UIKit.framework */; };
 		C679BEE3170926600010858A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE2170926600010858A /* Foundation.framework */; };
 		C679BEE5170926600010858A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679BEE4170926600010858A /* CoreGraphics.framework */; };
@@ -58,8 +58,8 @@
 		C60A8F2C1752338800888BE7 /* 古文观止-utf16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf16.txt"; sourceTree = "<group>"; };
 		C60A8F2E175233CF00888BE7 /* 诗经-gb18030.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "诗经-gb18030.txt"; sourceTree = "<group>"; };
 		C60A8F321752362200888BE7 /* harry-porter.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "harry-porter.txt"; sourceTree = "<group>"; };
-		C6111CA9170EF4FA00755439 /* FileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTools.h; sourceTree = "<group>"; };
-		C6111CAA170EF4FA00755439 /* FileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTools.m; sourceTree = "<group>"; };
+		C6111CA9170EF4FA00755439 /* TextFileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFileTools.h; sourceTree = "<group>"; };
+		C6111CAA170EF4FA00755439 /* TextFileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFileTools.m; sourceTree = "<group>"; };
 		C6111CAD170F07C900755439 /* 古文观止-utf8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf8.txt"; sourceTree = "<group>"; };
 		C642DB141710000A00A4A5EA /* 古文观止-big5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-big5.txt"; sourceTree = "<group>"; };
 		C642DB171710000A00A4A5EA /* 诗经-utf8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "诗经-utf8.txt"; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 		C65149DB174FC9AC00B1E330 /* RandomAccessText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomAccessText.m; sourceTree = "<group>"; };
 		C65149DD175053D600B1E330 /* Paginater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paginater.h; sourceTree = "<group>"; };
 		C65149DE175053D600B1E330 /* Paginater.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Paginater.mm; sourceTree = "<group>"; };
-		C66F370D170A7D8500B27F1A /* FileScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileScanner.h; sourceTree = "<group>"; };
-		C66F370E170A7D8500B27F1A /* FileScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileScanner.m; sourceTree = "<group>"; };
+		C66F370D170A7D8500B27F1A /* TextFileScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFileScanner.h; sourceTree = "<group>"; };
+		C66F370E170A7D8500B27F1A /* TextFileScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFileScanner.m; sourceTree = "<group>"; };
 		C679BEDD170926600010858A /* book-reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "book-reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C679BEE0170926600010858A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C679BEE2170926600010858A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,10 +123,10 @@
 		C66F370B170A7D0C00B27F1A /* core */ = {
 			isa = PBXGroup;
 			children = (
-				C66F370D170A7D8500B27F1A /* FileScanner.h */,
-				C66F370E170A7D8500B27F1A /* FileScanner.m */,
-				C6111CA9170EF4FA00755439 /* FileTools.h */,
-				C6111CAA170EF4FA00755439 /* FileTools.m */,
+				C66F370D170A7D8500B27F1A /* TextFileScanner.h */,
+				C66F370E170A7D8500B27F1A /* TextFileScanner.m */,
+				C6111CA9170EF4FA00755439 /* TextFileTools.h */,
+				C6111CAA170EF4FA00755439 /* TextFileTools.m */,
 				C65149DA174FC9AC00B1E330 /* RandomAccessText.h */,
 				C65149DB174FC9AC00B1E330 /* RandomAccessText.m */,
 				C65149DD175053D600B1E330 /* Paginater.h */,
@@ -355,8 +355,8 @@
 			files = (
 				C679BEED170926600010858A /* main.m in Sources */,
 				C679BEF1170926600010858A /* AppDelegate.m in Sources */,
-				C66F370F170A7D8500B27F1A /* FileScanner.m in Sources */,
-				C6111CAB170EF4FA00755439 /* FileTools.m in Sources */,
+				C66F370F170A7D8500B27F1A /* TextFileScanner.m in Sources */,
+				C6111CAB170EF4FA00755439 /* TextFileTools.m in Sources */,
 				C65149DC174FC9AC00B1E330 /* RandomAccessText.m in Sources */,
 				C65149DF175053D600B1E330 /* Paginater.mm in Sources */,
 			);
@@ -367,8 +367,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C679BF0C170926600010858A /* book_readerTests.m in Sources */,
-				C66F3710170A7D8500B27F1A /* FileScanner.m in Sources */,
-				C6111CAC170EF4FA00755439 /* FileTools.m in Sources */,
+				C66F3710170A7D8500B27F1A /* TextFileScanner.m in Sources */,
+				C6111CAC170EF4FA00755439 /* TextFileTools.m in Sources */,
 				C63E43A217512C0100FFBA23 /* Paginater.mm in Sources */,
 				C63E43A317512C0500FFBA23 /* RandomAccessText.m in Sources */,
 			);

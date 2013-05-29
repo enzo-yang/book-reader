@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FileScanner.h"
+#import "TextFileScanner.h"
 
 extern const NSStringEncoding kUnknownStringEncoding;
 
-@interface FileTools : NSObject
+@interface TextFileTools : NSObject
 
-+ (BOOL)convertFile:(FileScanner *)scanner toEncoding:(NSStringEncoding)encoding dest:(NSString *)destPath;
++ (BOOL)convertFile:(TextFileScanner *)scanner toEncoding:(NSStringEncoding)encoding dest:(NSString *)destPath;
 
 + (NSStringEncoding)recognizeEncoding:(NSString *)path;
 

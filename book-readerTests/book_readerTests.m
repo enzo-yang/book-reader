@@ -7,7 +7,7 @@
 //
 
 #import "book_readerTests.h"
-#import "FileTools.h"
+#import "TextFileTools.h"
 #import "Paginater.h"
 
 @implementation book_readerTests
@@ -29,20 +29,20 @@
     NSString *utf8Path = [[NSBundle bundleForClass:[self class]] pathForResource:@"诗经-utf8" ofType:@"txt"];
     NSString *asciiPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"harry-porter" ofType:@"txt"];
     
-    FileScanner *scanner = nil;
-    scanner = [FileScanner fileScannerOfFile:utf8GuWenPath encoding:[FileTools recognizeEncoding:utf8GuWenPath]];
+    TextFileScanner *scanner = nil;
+    scanner = [TextFileScanner fileScannerOfFile:utf8GuWenPath encoding:[TextFileTools recognizeEncoding:utf8GuWenPath]];
     NSLog(@"%@", scanner);
     
-    scanner = [FileScanner fileScannerOfFile:utf16GuWenPath encoding:[FileTools recognizeEncoding:utf16GuWenPath]];
+    scanner = [TextFileScanner fileScannerOfFile:utf16GuWenPath encoding:[TextFileTools recognizeEncoding:utf16GuWenPath]];
     NSLog(@"%@", scanner);
     
-    scanner = [FileScanner fileScannerOfFile:gb18030Path encoding:[FileTools recognizeEncoding:gb18030Path]];
+    scanner = [TextFileScanner fileScannerOfFile:gb18030Path encoding:[TextFileTools recognizeEncoding:gb18030Path]];
     NSLog(@"%@", scanner);
     
-    scanner = [FileScanner fileScannerOfFile:utf8Path encoding:[FileTools recognizeEncoding:utf8Path]];
+    scanner = [TextFileScanner fileScannerOfFile:utf8Path encoding:[TextFileTools recognizeEncoding:utf8Path]];
     NSLog(@"%@", scanner);
     
-    scanner = [FileScanner fileScannerOfFile:asciiPath encoding:[FileTools recognizeEncoding:asciiPath]];
+    scanner = [TextFileScanner fileScannerOfFile:asciiPath encoding:[TextFileTools recognizeEncoding:asciiPath]];
     NSLog(@"%@", scanner);
     
 }
@@ -52,8 +52,8 @@
 - (void)testConverShiftJIS2Utf16BE {
     NSString *shiftJISWenxuePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"文学少女-Shift-JIS" ofType:@"txt"];
     NSString *utf16BEWenXuePath = [NSHomeDirectory() stringByAppendingPathComponent:@"文学少女-utf16be.txt"];
-    FileScanner *scanner = [[FileScannerByLine alloc] initWithPath:shiftJISWenxuePath encoding:NSShiftJISStringEncoding];
-    [FileTools convertFile:scanner toEncoding:NSUTF16BigEndianStringEncoding dest:utf16BEWenXuePath];
+    TextFileScanner *scanner = [[TextFileScannerByLine alloc] initWithPath:shiftJISWenxuePath encoding:NSShiftJISStringEncoding];
+    [TextFileTools convertFile:scanner toEncoding:NSUTF16BigEndianStringEncoding dest:utf16BEWenXuePath];
     
     NSLog(@"%@", utf16BEWenXuePath);
 }
@@ -75,8 +75,8 @@
 - (void)testConverBig52Utf16LE {
     NSString *big5GuWenPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"古文观止-big5" ofType:@"txt"];
     NSString *utf16LEGuWenPath = [NSHomeDirectory() stringByAppendingPathComponent:@"古文观止-utf16le.txt"];
-    FileScanner *scanner = [[FileScannerBIG5 alloc] initWithPath:big5GuWenPath];
-    [FileTools convertFile:scanner toEncoding:NSUTF16LittleEndianStringEncoding dest:utf16LEGuWenPath];
+    TextFileScanner *scanner = [[TextFileScannerBIG5 alloc] initWithPath:big5GuWenPath];
+    [TextFileTools convertFile:scanner toEncoding:NSUTF16LittleEndianStringEncoding dest:utf16LEGuWenPath];
     
     NSLog(@"%@", utf16LEGuWenPath);
 }
