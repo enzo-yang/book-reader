@@ -570,6 +570,9 @@ const NSInteger kFileScannerTolerateMaxInvalidCount = 100;
         nextOffset = range.location + range.length;
         
     }
+    if ((NSUInteger)(nextOffset - _offsetInBuffer) == 4294602370) {
+        NSLog(@"这里有问题");
+    }
     resultData = [_buffer subdataWithRange:NSMakeRange(_offsetInBuffer, nextOffset - _offsetInBuffer)];
     _offsetInBuffer = nextOffset;
     return [[NSString alloc] initWithData:resultData encoding:self.encoding];

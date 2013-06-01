@@ -12,6 +12,8 @@
 #include <iostream>
 #import <CoreText/CoreText.h>
 
+#import "Typesetting.h"
+
 using namespace std;
 
 @implementation Paginater {
@@ -42,8 +44,12 @@ using namespace std;
     const int charsPerLoad = 50000;
     
     NSString *buffer = [_text textInRange:NSMakeRange(0, charsPerLoad)];
-    NSAttributedString *attrString = [[NSAttributedString  alloc] initWithString:buffer];
+    NSMutableAttributedString *attrString = [[NSMutableAttributedString  alloc] initWithString:buffer];
     buffer = nil; // 马上释放
+    
+    NSDictionary *strAttr = [Typesetting stringAttrWithFont:_font];
+    [attrString setAttributes:strAttr range:NSMakeRange(0, attrString.length)];
+    
     CTFramesetterRef frameSetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef) attrString);
     CGPathRef path = CGPathCreateWithRect(CGRectMake(0, 0, _size.width, _size.height), NULL);
     
@@ -92,7 +98,8 @@ using namespace std;
             
             _pageOffsets.pop_back();
             buffer = [_text textInRange:NSMakeRange(currentOffset, charsPerLoad)];
-            attrString = [[NSAttributedString alloc] initWithString:buffer];
+            attrString = [[NSMutableAttributedString alloc] initWithString:buffer];
+            [attrString setAttributes:strAttr range:NSMakeRange(0, attrString.length)];
             buffer = nil;
             
             currentInnerOffset = 0;
@@ -116,7 +123,20 @@ using namespace std;
 }
 
 - (NSUInteger)offsetOfPage:(NSUInteger)page {
+    if (page >= [self pageCount]) return NSNotFound;
     return _pageOffsets[page];
+}
+
+- (NSRange)rangeOfPage:(NSUInteger)page {
+    if (page >= _pageOffsets.size()) {
+        return NSMakeRange(NSNotFound, 0);
+    }
+    
+    if (page < _pageOffsets.size() - 1) {
+        return NSMakeRange(_pageOffsets[page], _pageOffsets[page + 1] - _pageOffsets[page]);
+    }
+    
+    return NSMakeRange(_pageOffsets[page], _text.length - _pageOffsets[page]);
 }
 
 - (NSString *)stringOfPage:(NSUInteger)page {
@@ -159,7 +179,6 @@ using namespace std;
     if (stream.is_open()) {
         NSUInteger cnt;
         stream >> cnt;
-        NSLog(@"cnt %d", cnt);
         if (cnt && stream.good()) {
             int tmp = 0;
             for (int i=0; i<cnt && !stream.eof(); ++i) {

@@ -11,6 +11,11 @@
 		C60A8F2F175233CF00888BE7 /* 诗经-gb18030.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F2E175233CF00888BE7 /* 诗经-gb18030.txt */; };
 		C60A8F331752362200888BE7 /* harry-porter.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F321752362200888BE7 /* harry-porter.txt */; };
 		C60A8F3517564A5D00888BE7 /* 文学少女-utf16be.txt in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F3417564A5D00888BE7 /* 文学少女-utf16be.txt */; };
+		C60A8F3A1758C5A400888BE7 /* ReadController.m in Sources */ = {isa = PBXBuildFile; fileRef = C60A8F381758C5A400888BE7 /* ReadController.m */; };
+		C60A8F3B1758C5A400888BE7 /* ReadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C60A8F391758C5A400888BE7 /* ReadController.xib */; };
+		C60A8F3F1758C6AE00888BE7 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C60A8F3E1758C6AE00888BE7 /* PageView.m */; };
+		C60A8F42175A148B00888BE7 /* Typesetting.m in Sources */ = {isa = PBXBuildFile; fileRef = C60A8F41175A148B00888BE7 /* Typesetting.m */; };
+		C60A8F43175A148B00888BE7 /* Typesetting.m in Sources */ = {isa = PBXBuildFile; fileRef = C60A8F41175A148B00888BE7 /* Typesetting.m */; };
 		C6111CAB170EF4FA00755439 /* TextFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111CAA170EF4FA00755439 /* TextFileTools.m */; };
 		C6111CAC170EF4FA00755439 /* TextFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111CAA170EF4FA00755439 /* TextFileTools.m */; };
 		C6111CAE170F07C900755439 /* 古文观止-utf8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6111CAD170F07C900755439 /* 古文观止-utf8.txt */; };
@@ -62,6 +67,13 @@
 		C60A8F2E175233CF00888BE7 /* 诗经-gb18030.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "诗经-gb18030.txt"; sourceTree = "<group>"; };
 		C60A8F321752362200888BE7 /* harry-porter.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "harry-porter.txt"; sourceTree = "<group>"; };
 		C60A8F3417564A5D00888BE7 /* 文学少女-utf16be.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "文学少女-utf16be.txt"; sourceTree = "<group>"; };
+		C60A8F371758C5A400888BE7 /* ReadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadController.h; sourceTree = "<group>"; };
+		C60A8F381758C5A400888BE7 /* ReadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadController.m; sourceTree = "<group>"; };
+		C60A8F391758C5A400888BE7 /* ReadController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadController.xib; sourceTree = "<group>"; };
+		C60A8F3D1758C6AE00888BE7 /* PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageView.h; sourceTree = "<group>"; };
+		C60A8F3E1758C6AE00888BE7 /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
+		C60A8F40175A148B00888BE7 /* Typesetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Typesetting.h; sourceTree = "<group>"; };
+		C60A8F41175A148B00888BE7 /* Typesetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Typesetting.m; sourceTree = "<group>"; };
 		C6111CA9170EF4FA00755439 /* TextFileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFileTools.h; sourceTree = "<group>"; };
 		C6111CAA170EF4FA00755439 /* TextFileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFileTools.m; sourceTree = "<group>"; };
 		C6111CAD170F07C900755439 /* 古文观止-utf8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "古文观止-utf8.txt"; sourceTree = "<group>"; };
@@ -128,6 +140,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C60A8F361758C50A00888BE7 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				C60A8F371758C5A400888BE7 /* ReadController.h */,
+				C60A8F381758C5A400888BE7 /* ReadController.m */,
+				C60A8F391758C5A400888BE7 /* ReadController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		C60A8F3C1758C63000888BE7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C60A8F3D1758C6AE00888BE7 /* PageView.h */,
+				C60A8F3E1758C6AE00888BE7 /* PageView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		C66F370B170A7D0C00B27F1A /* core */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +208,8 @@
 		C679BEE6170926600010858A /* book-reader */ = {
 			isa = PBXGroup;
 			children = (
+				C60A8F3C1758C63000888BE7 /* view */,
+				C60A8F361758C50A00888BE7 /* controller */,
 				C6C0BAD5175629C400AFABF0 /* helper */,
 				C66F370B170A7D0C00B27F1A /* core */,
 				C679BEEF170926600010858A /* AppDelegate.h */,
@@ -241,6 +274,8 @@
 			children = (
 				C6C0BADE17562A7600AFABF0 /* FileUtil.h */,
 				C6C0BADF17562A7600AFABF0 /* FileUtil.m */,
+				C60A8F40175A148B00888BE7 /* Typesetting.h */,
+				C60A8F41175A148B00888BE7 /* Typesetting.m */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -341,6 +376,7 @@
 				C6C0BAD917562A1500AFABF0 /* 古文观止-utf16le.txt in Resources */,
 				C6C0BADA17562A1500AFABF0 /* 古文观止-utf16.txt in Resources */,
 				C6C0BADD17562A5700AFABF0 /* 屏幕快照 2013-05-28 下午5.40.15.png in Resources */,
+				C60A8F3B1758C5A400888BE7 /* ReadController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +426,9 @@
 				C65149DC174FC9AC00B1E330 /* RandomAccessText.m in Sources */,
 				C65149DF175053D600B1E330 /* Paginater.mm in Sources */,
 				C6C0BAE017562A7600AFABF0 /* FileUtil.m in Sources */,
+				C60A8F3A1758C5A400888BE7 /* ReadController.m in Sources */,
+				C60A8F3F1758C6AE00888BE7 /* PageView.m in Sources */,
+				C60A8F42175A148B00888BE7 /* Typesetting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +442,7 @@
 				C63E43A217512C0100FFBA23 /* Paginater.mm in Sources */,
 				C63E43A317512C0500FFBA23 /* RandomAccessText.m in Sources */,
 				C6C0BAE117562A7600AFABF0 /* FileUtil.m in Sources */,
+				C60A8F43175A148B00888BE7 /* Typesetting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

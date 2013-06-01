@@ -18,6 +18,7 @@
 
 - (NSUInteger)pageCount;
 - (NSUInteger)offsetOfPage:(NSUInteger)page;
+- (NSRange)rangeOfPage:(NSUInteger)page;
 - (NSString *)stringOfPage:(NSUInteger)page;
 
 - (NSString *)pageInfoFileName;

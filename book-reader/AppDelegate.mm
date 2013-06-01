@@ -7,10 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "Paginater.h"
-#include <fstream>
-
-using namespace std;
+#import "ReadController.h"
 
 @interface AppDelegate()
 @end
@@ -21,6 +18,9 @@ using namespace std;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    self.window.rootViewController = [ReadController new];
+    
     
 //    NSString *jis = @"次の\n\r行0D0Aをコー\n\rシフトJIS";
 //    NSStringEncoding encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);

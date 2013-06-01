@@ -48,6 +48,9 @@
     int tail = (range.location + range.length) * _bytesAChar;
     tail = tail > _buffer.length ? _buffer.length : tail;
     
+    if ((NSUInteger)(tail - head) == 4294602370) {
+        NSLog(@"这里有问题");
+    }
     NSData *data = [_buffer subdataWithRange:NSMakeRange(head, tail - head)];
     NSString *result = [[NSString alloc] initWithData:data encoding:_encoding];
 
