@@ -18,9 +18,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         CGAffineTransform transform = CGAffineTransformMakeScale(1, -1);
-//        CGAffineTransformTranslate(transform, 0, -self.bounds.size.height);
         self.transform = transform;
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
